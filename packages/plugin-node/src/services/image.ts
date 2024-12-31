@@ -211,7 +211,7 @@ export class ImageDescriptionService
                 const endpoint =
                     models[this.runtime.imageModelProvider].endpoint ??
                     "https://api.openai.com/v1";
-                elizaLogger.log("Describe Image Completions", content, imageUrl)
+                elizaLogger.log("Describe Image Completions", imageUrl)
                 const response = await fetch(endpoint + "/chat/completions", {
                     method: "POST",
                     headers: {
