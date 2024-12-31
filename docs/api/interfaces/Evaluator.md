@@ -16,7 +16,7 @@ Whether to always run
 
 [packages/core/src/types.ts:441](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L441)
 
-***
+---
 
 ### description
 
@@ -28,7 +28,7 @@ Detailed description
 
 [packages/core/src/types.ts:444](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L444)
 
-***
+---
 
 ### similes
 
@@ -40,7 +40,7 @@ Similar evaluator descriptions
 
 [packages/core/src/types.ts:447](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L447)
 
-***
+---
 
 ### examples
 
@@ -52,7 +52,7 @@ Example evaluations
 
 [packages/core/src/types.ts:450](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L450)
 
-***
+---
 
 ### handler
 
@@ -64,7 +64,7 @@ Handler function
 
 [packages/core/src/types.ts:453](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L453)
 
-***
+---
 
 ### name
 
@@ -76,7 +76,7 @@ Evaluator name
 
 [packages/core/src/types.ts:456](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L456)
 
-***
+---
 
 ### validate
 

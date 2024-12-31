@@ -1,15 +1,15 @@
 import {
     Action,
     ActionExample,
+    composeContext,
+    Content,
+    elizaLogger,
+    generateObject,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    HandlerCallback,
-    elizaLogger,
-    composeContext,
-    generateObject,
     ModelClass,
-    Content,
+    State,
 } from "@elizaos/core";
 import { validateAvalancheConfig } from "../environment";
 import { createMarketAndToken } from "../utils/tokenMill";

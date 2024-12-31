@@ -18,7 +18,6 @@ import { buildConversationThread } from "./utils.ts";
 import { twitterMessageHandlerTemplate } from "./interactions.ts";
 import { DEFAULT_MAX_TWEET_LENGTH } from "./environment.ts";
 import { kline } from "./kline.ts";
-import { realImgUrl } from "./fetchImg.ts";
 
 const twitterPostTemplate = `
 # Areas of Expertise
@@ -772,7 +771,7 @@ export class TwitterPostClient {
                                         .getService<IImageDescriptionService>(
                                             ServiceType.IMAGE_DESCRIPTION
                                         )
-                                        .describeImage(await realImgUrl(photo.url));
+                                        .describeImage(photo.url);
                                     imageDescriptions.push(description);
                                 }
                             }
@@ -977,7 +976,7 @@ export class TwitterPostClient {
                         .getService<IImageDescriptionService>(
                             ServiceType.IMAGE_DESCRIPTION
                         )
-                        .describeImage(await realImgUrl(photo.url));
+                        .describeImage(photo.url);
                     imageDescriptions.push(description);
                 }
             }

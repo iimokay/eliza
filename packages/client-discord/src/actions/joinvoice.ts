@@ -13,9 +13,9 @@ import {
     Channel,
     ChannelType,
     Client,
-    Message as DiscordMessage,
     Guild,
     GuildMember,
+    Message as DiscordMessage,
 } from "discord.js";
 
 export default {

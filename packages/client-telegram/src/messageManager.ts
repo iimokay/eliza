@@ -1,29 +1,33 @@
 import { Message } from "@telegraf/types";
 import { Context, Telegraf } from "telegraf";
-import { composeContext, elizaLogger, ServiceType, composeRandomUser } from "@elizaos/core";
-import { getEmbeddingZeroVector } from "@elizaos/core";
 import {
+    composeContext,
+    composeRandomUser,
     Content,
+    elizaLogger,
+    generateMessageResponse,
+    generateShouldRespond,
+    getEmbeddingZeroVector,
     HandlerCallback,
     IAgentRuntime,
     IImageDescriptionService,
-    Memory,
-    ModelClass,
-    State,
-    UUID,
     Media,
+    Memory,
+    messageCompletionFooter,
+    ModelClass,
+    ServiceType,
+    shouldRespondFooter,
+    State,
+    stringToUuid,
+    UUID,
 } from "@elizaos/core";
-import { stringToUuid } from "@elizaos/core";
-
-import { generateMessageResponse, generateShouldRespond } from "@elizaos/core";
-import { messageCompletionFooter, shouldRespondFooter } from "@elizaos/core";
 
 import { cosineSimilarity } from "./utils";
 import {
     MESSAGE_CONSTANTS,
-    TIMING_CONSTANTS,
     RESPONSE_CHANCES,
     TEAM_COORDINATION,
+    TIMING_CONSTANTS,
 } from "./constants";
 
 import fs from "fs";

@@ -1,9 +1,9 @@
 import {
-    Provider,
+    elizaLogger,
     IAgentRuntime,
     Memory,
+    Provider,
     State,
-    elizaLogger,
 } from "@elizaos/core";
 
 export const sampleProvider: Provider = {

@@ -1,11 +1,11 @@
 import {
-    Provider,
+    elizaLogger,
     IAgentRuntime,
     Memory,
+    Provider,
     State,
-    elizaLogger,
 } from "@elizaos/core";
-import { GitBookResponse, GitBookClientConfig } from "../types";
+import { GitBookClientConfig, GitBookResponse } from "../types";
 
 function cleanText(text: string): string {
     const cleaned = text

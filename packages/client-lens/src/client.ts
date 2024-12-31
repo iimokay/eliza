@@ -1,16 +1,16 @@
-import { IAgentRuntime, elizaLogger } from "@elizaos/core";
+import { elizaLogger, IAgentRuntime } from "@elizaos/core";
 import {
     AnyPublicationFragment,
+    FeedEventItemType,
     LensClient as LensClientCore,
-    production,
     LensTransactionStatusType,
     LimitType,
     NotificationType,
+    production,
     ProfileFragment,
     PublicationType,
-    FeedEventItemType,
 } from "@lens-protocol/client";
-import { Profile, BroadcastResult } from "./types";
+import { BroadcastResult, Profile } from "./types";
 import { PrivateKeyAccount } from "viem";
 import { getProfilePictureUri, handleBroadcastResult, omit } from "./utils";
 

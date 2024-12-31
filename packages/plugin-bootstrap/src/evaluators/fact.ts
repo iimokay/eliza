@@ -1,12 +1,12 @@
-import { composeContext } from "@elizaos/core";
-import { generateObjectArray } from "@elizaos/core";
-import { MemoryManager } from "@elizaos/core";
 import {
     ActionExample,
+    composeContext,
+    Evaluator,
+    generateObjectArray,
     IAgentRuntime,
     Memory,
+    MemoryManager,
     ModelClass,
-    Evaluator,
 } from "@elizaos/core";
 
 export const formatFacts = (facts: Memory[]) => {

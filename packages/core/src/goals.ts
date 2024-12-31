@@ -1,6 +1,6 @@
 import {
-    IAgentRuntime,
     type Goal,
+    IAgentRuntime,
     type Objective,
     type UUID,
 } from "./types.ts";

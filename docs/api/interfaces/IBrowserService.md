@@ -50,7 +50,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 [packages/core/src/types.ts:1041](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1041)
 
-***
+---
 
 ### closeBrowser()
 
@@ -64,7 +64,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 [packages/core/src/types.ts:1177](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1177)
 
-***
+---
 
 ### getPageContent()
 

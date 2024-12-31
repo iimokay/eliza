@@ -2,7 +2,7 @@
 
 # Type Alias: BGE
 
-> **BGE**: *typeof* `EmbeddingProvider.BGE`
+> **BGE**: _typeof_ `EmbeddingProvider.BGE`
 
 ## Defined in
 

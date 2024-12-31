@@ -1,11 +1,11 @@
-import { ByteArray, formatEther, parseEther, type Hex } from "viem";
+import { ByteArray, formatEther, type Hex, parseEther } from "viem";
 import {
     composeContext,
     generateObjectDeprecated,
     HandlerCallback,
-    ModelClass,
     type IAgentRuntime,
     type Memory,
+    ModelClass,
     type State,
 } from "@elizaos/core";
 

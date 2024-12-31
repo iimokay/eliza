@@ -1,4 +1,4 @@
-import { Account, HttpTransport, Chain, Address, PublicClient } from "viem";
+import { Account, Address, Chain, HttpTransport, PublicClient } from "viem";
 
 type LicenseRegistryHasIpAttachedLicenseTermsRequest = {
     ipId: Address;

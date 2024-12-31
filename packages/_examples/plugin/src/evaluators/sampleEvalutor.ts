@@ -1,9 +1,9 @@
 import {
+    elizaLogger,
     Evaluator,
     IAgentRuntime,
     Memory,
     State,
-    elizaLogger,
 } from "@elizaos/core";
 
 export const sampleEvaluator: Evaluator = {

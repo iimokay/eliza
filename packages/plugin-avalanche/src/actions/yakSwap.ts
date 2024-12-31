@@ -1,17 +1,17 @@
 import {
     Action,
     ActionExample,
+    composeContext,
+    Content,
+    elizaLogger,
+    generateObject,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    HandlerCallback,
-    elizaLogger,
-    composeContext,
-    generateObject,
     ModelClass,
-    Content,
+    State,
 } from "@elizaos/core";
-import { approve, getTxReceipt, swap, getQuote } from "../utils";
+import { approve, getQuote, getTxReceipt, swap } from "../utils";
 import { Address } from "viem";
 import { validateAvalancheConfig } from "../environment";
 import { TOKEN_ADDRESSES, YAK_SWAP_CONFIG } from "../utils/constants";

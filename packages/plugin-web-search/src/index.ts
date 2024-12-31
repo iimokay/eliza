@@ -1,14 +1,14 @@
-import { elizaLogger } from "@elizaos/core";
 import {
     Action,
+    elizaLogger,
+    generateWebSearch,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     Plugin,
+    SearchResult,
     State,
 } from "@elizaos/core";
-import { generateWebSearch } from "@elizaos/core";
-import { SearchResult } from "@elizaos/core";
 import { encodingForModel, TiktokenModel } from "js-tiktoken";
 
 const DEFAULT_MAX_WEB_SEARCH_TOKENS = 4000;

@@ -1,28 +1,25 @@
 import {
     Action,
+    composeContext,
+    generateObject,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    HandlerCallback,
-} from "@elizaos/core";
-import {
-    generateObject,
-    composeContext,
     ModelClass,
-    Content,
+    State,
 } from "@elizaos/core";
 import {
     createPublicClient,
     createWalletClient,
+    encodeFunctionData,
     http,
     parseCFX,
-    encodeFunctionData,
 } from "cive";
 import { hexAddressToBase32 } from "cive/utils";
 import { privateKeyToAccount } from "cive/accounts";
 import { testnet } from "cive/chains";
 import { confluxBridgeTransferTemplate } from "../templates/bridgeTransfer";
-import { TransferSchema, isTransferContent } from "../types";
+import { isTransferContent, TransferSchema } from "../types";
 import CrossSpaceCallAbi from "../abi/crossSpaceCall";
 
 const bridgeSendCFX = async (

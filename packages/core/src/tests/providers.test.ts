@@ -2,8 +2,8 @@ import { getProviders } from "../providers";
 import {
     IAgentRuntime,
     type Memory,
-    type State,
     type Provider,
+    type State,
     UUID,
 } from "../types.ts";
 

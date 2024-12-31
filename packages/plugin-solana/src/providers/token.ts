@@ -1,20 +1,26 @@
-import { ICacheManager, settings } from "@elizaos/core";
-import { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
 import {
+    IAgentRuntime,
+    ICacheManager,
+    Memory,
+    Provider,
+    settings,
+    State,
+} from "@elizaos/core";
+import {
+    CalculatedBuyAmounts,
     DexScreenerData,
     DexScreenerPair,
     HolderData,
+    Prices,
     ProcessedTokenData,
+    TokenCodex,
     TokenSecurityData,
     TokenTradeData,
-    CalculatedBuyAmounts,
-    Prices,
-    TokenCodex,
 } from "../types/token.ts";
 import NodeCache from "node-cache";
 import * as path from "path";
 import { toBN } from "../bignumber.ts";
-import { WalletProvider, Item } from "./wallet.ts";
+import { Item, WalletProvider } from "./wallet.ts";
 import { Connection } from "@solana/web3.js";
 import { getWalletKey } from "../keypairUtils.ts";
 

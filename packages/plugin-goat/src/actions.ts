@@ -1,20 +1,20 @@
 import {
-    type WalletClient,
-    type Plugin,
     addParametersToDescription,
-    type Tool,
     getTools,
+    type Plugin,
+    type Tool,
+    type WalletClient,
 } from "@goat-sdk/core";
 import {
     type Action,
+    composeContext,
+    generateObject,
     generateText,
     type HandlerCallback,
     type IAgentRuntime,
     type Memory,
     ModelClass,
     type State,
-    composeContext,
-    generateObject,
 } from "@elizaos/core";
 
 type GetOnChainActionsParams<TWalletClient extends WalletClient> = {

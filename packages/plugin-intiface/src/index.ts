@@ -1,5 +1,5 @@
 import { ButtplugClient, ButtplugNodeWebsocketClientConnector } from "buttplug";
-import { validateIntifaceConfig, type IntifaceConfig } from "./environment";
+import { type IntifaceConfig, validateIntifaceConfig } from "./environment";
 import type {
     Action,
     HandlerCallback,
@@ -11,8 +11,8 @@ import type {
 import { Service, ServiceType } from "@elizaos/core";
 import {
     isPortAvailable,
-    startIntifaceEngine,
     shutdownIntifaceEngine,
+    startIntifaceEngine,
 } from "./utils";
 
 export interface IIntifaceService extends Service {

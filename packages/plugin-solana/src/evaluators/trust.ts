@@ -1,15 +1,15 @@
 import {
+    ActionExample,
+    booleanFooter,
     composeContext,
+    Content,
+    Evaluator,
     generateObjectArray,
     generateTrueOrFalse,
-    MemoryManager,
-    booleanFooter,
-    ActionExample,
-    Content,
     IAgentRuntime,
     Memory,
+    MemoryManager,
     ModelClass,
-    Evaluator,
 } from "@elizaos/core";
 import { TrustScoreManager } from "../providers/trustScoreProvider.ts";
 import { TokenProvider } from "../providers/token.ts";

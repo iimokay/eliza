@@ -1,7 +1,11 @@
-import { composeContext, composeRandomUser } from "@elizaos/core";
-import { generateMessageResponse, generateShouldRespond } from "@elizaos/core";
 import {
+    composeContext,
+    composeRandomUser,
     Content,
+    elizaLogger,
+    generateMessageResponse,
+    generateShouldRespond,
+    getEmbeddingZeroVector,
     HandlerCallback,
     IAgentRuntime,
     IBrowserService,
@@ -12,21 +16,20 @@ import {
     ModelClass,
     ServiceType,
     State,
+    stringToUuid,
     UUID,
 } from "@elizaos/core";
-import { stringToUuid, getEmbeddingZeroVector } from "@elizaos/core";
 import {
     ChannelType,
     Client,
     Message as DiscordMessage,
     TextChannel,
 } from "discord.js";
-import { elizaLogger } from "@elizaos/core";
 import { AttachmentManager } from "./attachments.ts";
 import { VoiceManager } from "./voice.ts";
 import {
-    discordShouldRespondTemplate,
     discordMessageHandlerTemplate,
+    discordShouldRespondTemplate,
 } from "./templates.ts";
 import {
     IGNORE_RESPONSE_WORDS,
@@ -38,9 +41,9 @@ import {
     TIMING_CONSTANTS,
 } from "./constants";
 import {
-    sendMessageInChunks,
     canSendMessage,
     cosineSimilarity,
+    sendMessageInChunks,
 } from "./utils.ts";
 
 interface MessageContext {

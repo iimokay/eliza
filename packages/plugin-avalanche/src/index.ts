@@ -7,10 +7,10 @@ import { tokensProvider } from "./providers/tokens";
 import { strategiesProvider } from "./providers/strategies";
 import { walletProvider } from "./providers/wallet";
 import {
-    TOKEN_ADDRESSES,
     STRATEGY_ADDRESSES,
-    YAK_SWAP_CONFIG,
+    TOKEN_ADDRESSES,
     TOKEN_MILL_CONFIG,
+    YAK_SWAP_CONFIG,
 } from "./utils/constants";
 
 export const PROVIDER_CONFIG = {

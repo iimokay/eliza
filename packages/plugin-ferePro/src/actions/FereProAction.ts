@@ -1,11 +1,11 @@
 import {
-    elizaLogger,
+    type Action,
     ActionExample,
+    elizaLogger,
+    HandlerCallback,
+    IAgentRuntime,
     Memory,
     State,
-    IAgentRuntime,
-    type Action,
-    HandlerCallback,
 } from "@elizaos/core";
 import { FereProService } from "../services/FereProService";
 

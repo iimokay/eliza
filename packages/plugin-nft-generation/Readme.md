@@ -5,9 +5,11 @@ A plugin for handling NFT collection generation, NFT creation, and verification 
 ## Handlers
 
 ### createCollection
+
 The createCollection handler generates an NFT collection logo, uploads it to AWS S3, and creates a Solana blockchain collection.
 
 #### Usage
+
 ```typescript
 import { createCollection } from "./handlers/createCollection.ts";
 
@@ -25,7 +27,9 @@ console.log("Collection created:", result);
 Image Generation: Automatically generates a collection logo based on the provided name and theme.
 AWS S3 Integration: Uploads the generated logo and metadata to AWS S3.
 Solana Blockchain: Creates a collection with the generated logo and metadata on the Solana blockchain.
+
 ### createNFT
+
 The createNFT handler generates individual NFTs for a collection. It includes metadata creation and uploads the NFT information to AWS S3.
 
 #### Usage
@@ -61,7 +65,8 @@ const verificationResult = await verifyNFT({
 });
 
 console.log("NFT verified:", verificationResult);
-````
+```
+
 ---
 
 ### Example Workflow
@@ -87,7 +92,8 @@ const runtime = initializeRuntime(); // Replace with actual IAgentRuntime initia
         runtime,
         collectionName: "MyUniqueCollection",
         collectionAddress: collectionResult.address,
-        collectionAdminPublicKey: collectionResult.collectionInfo.adminPublicKey,
+        collectionAdminPublicKey:
+            collectionResult.collectionInfo.adminPublicKey,
         collectionFee: 0.01,
         tokenId: 1,
     });
@@ -108,6 +114,7 @@ const runtime = initializeRuntime(); // Replace with actual IAgentRuntime initia
 ### Configuration
 
 #### Environment Variables
+
 ```
 Ensure the following environment variables are set for proper functionality:
 
@@ -121,6 +128,7 @@ SOLANA_PRIVATE_KEY	Private key for Solana blockchain
 SOLANA_ADMIN_PUBLIC_KEY	Admin public key for Solana operations
 SOLANA_ADMIN_PRIVATE_KEY	Admin private key for Solana operations
 ```
+
 #### Example Prompts
 
 Here are some examples of user prompts to trigger NFT collection generation:
@@ -130,20 +138,22 @@ Here are some examples of user prompts to trigger NFT collection generation:
 "Compile an NFT collection for me."
 "Build a sci-fi themed collection."
 
-
 #### Local Testing with TEE Simulator
 
 To test locally using a Trusted Execution Environment (TEE) simulator, follow these steps:
 
 Pull the simulator Docker image:
-``` bash
+
+```bash
 docker pull phalanetwork/tappd-simulator:latest
 ```
+
 Run the simulator:
 
-``` bash
+```bash
 docker run --rm -p 8090:8090 phalanetwork/tappd-simulator:latest
 ```
+
 Update your environment variable for the simulator:
 
 ```env
@@ -162,6 +172,7 @@ This plugin relies on the following services and libraries:
 ### Action Configuration
 
 #### GENERATE_COLLECTION
+
 The action for generating NFT collections is configured with the following parameters:
 
 ```typescript
@@ -178,7 +189,9 @@ const nftCollectionGeneration: Action = {
         },
         {
             agent: "{{agentName}}",
-            content: { text: "The collection Galaxy has been successfully created." },
+            content: {
+                text: "The collection Galaxy has been successfully created.",
+            },
         },
     ],
 };

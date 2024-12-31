@@ -2,7 +2,7 @@
 
 # Type Alias: Ollama
 
-> **Ollama**: *typeof* `EmbeddingProvider.Ollama`
+> **Ollama**: _typeof_ `EmbeddingProvider.Ollama`
 
 ## Defined in
 

@@ -1154,7 +1154,7 @@ export interface IAgentRuntime {
 export interface IImageDescriptionService extends Service {
     describeImage(
         imageUrl: string,
-        prompt?: string,
+        prompt?: string
     ): Promise<{ title: string; description: string }>;
 }
 

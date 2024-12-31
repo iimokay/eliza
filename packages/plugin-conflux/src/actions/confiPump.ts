@@ -1,30 +1,32 @@
 import {
     Action,
+    composeContext,
+    generateObject,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
+    ModelClass,
     State,
-    HandlerCallback,
 } from "@elizaos/core";
-import { generateObject, composeContext, ModelClass } from "@elizaos/core";
 import {
+    Account,
     createPublicClient,
     createWalletClient,
+    encodeFunctionData,
     http,
     parseEther,
-    encodeFunctionData,
     WalletClient,
-    Account,
 } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import { confluxESpaceTestnet, confluxESpace } from "viem/chains";
-import { parseUnits, getAddress } from "viem/utils";
+import { confluxESpaceTestnet } from "viem/chains";
+import { getAddress, parseUnits } from "viem/utils";
 import { confluxTransferTemplate } from "../templates/transfer";
 import {
-    PumpSchema,
-    isPumpContent,
     isPumpBuyContent,
+    isPumpContent,
     isPumpCreateContent,
     isPumpSellContent,
+    PumpSchema,
 } from "../types";
 import MEMEABI from "../abi/meme";
 import ERC20ABI from "../abi/erc20";

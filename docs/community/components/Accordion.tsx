@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GitHubItem } from "./Contributions";
 import { GITHUB_PAGE_LIMIT } from "./Contributors";
 

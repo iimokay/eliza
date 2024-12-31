@@ -1,23 +1,21 @@
 import {
-    composeContext,
-    generateText,
-    splitChunks,
-    trimTokens,
-    parseJSONObjectFromText,
-} from "@elizaos/core";
-import { models } from "@elizaos/core";
-import { getActorDetails } from "@elizaos/core";
-import {
     Action,
     ActionExample,
+    composeContext,
     Content,
+    elizaLogger,
+    generateText,
+    getActorDetails,
     HandlerCallback,
     IAgentRuntime,
     Media,
     Memory,
     ModelClass,
+    models,
+    parseJSONObjectFromText,
+    splitChunks,
     State,
-    elizaLogger,
+    trimTokens,
 } from "@elizaos/core";
 import { ISlackService, SLACK_SERVICE_TYPE } from "../types/slack-types";
 

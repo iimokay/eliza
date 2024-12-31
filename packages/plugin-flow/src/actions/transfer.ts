@@ -1,14 +1,14 @@
 import {
+    type Action,
+    type ActionExample,
     composeContext,
     Content,
     elizaLogger,
     generateObjectArray,
-    ModelClass,
-    type Action,
-    type ActionExample,
     type HandlerCallback,
     type IAgentRuntime,
     type Memory,
+    ModelClass,
     type State,
 } from "@elizaos/core";
 import Exception from "../types/exception";

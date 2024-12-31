@@ -5,7 +5,7 @@ import { elizaLogger } from "@elizaos/core";
 
 export async function kline() {
     try {
-        const browser = await puppeteer.launch({ headless: true });
+        const browser = await puppeteer.launch({ headless: "new" });
         const page = await browser.newPage();
         // set win width and height
         await page.setViewport({

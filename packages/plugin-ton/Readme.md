@@ -30,22 +30,22 @@ Ensure your environment is set up with the necessary configuration files and env
 ### Importing the Plugin
 
 ```typescript
-import { WalletProvider, TransferAction } from 'plugin-ton';
+import { WalletProvider, TransferAction } from "plugin-ton";
 
 // Initialize wallet provider
-const wallet = new WalletProvider('YOUR_PRIVATE_KEY');
+const wallet = new WalletProvider("YOUR_PRIVATE_KEY");
 
 // Fetch wallet balance
 const balance = await wallet.getBalance();
-console.log('Wallet Balance:', balance);
+console.log("Wallet Balance:", balance);
 
 // Transfer TON coins
 const transfer = new TransferAction(wallet);
 await transfer.execute({
-  to: 'RECIPIENT_ADDRESS',
-  amount: 10,
+    to: "RECIPIENT_ADDRESS",
+    amount: 10,
 });
-console.log('Transfer successful');
+console.log("Transfer successful");
 ```
 
 ## API Reference

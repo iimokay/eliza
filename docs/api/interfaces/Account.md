@@ -16,7 +16,7 @@ Unique identifier
 
 [packages/core/src/types.ts:505](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L505)
 
-***
+---
 
 ### name
 
@@ -28,7 +28,7 @@ Display name
 
 [packages/core/src/types.ts:508](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L508)
 
-***
+---
 
 ### username
 
@@ -40,7 +40,7 @@ Username
 
 [packages/core/src/types.ts:511](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L511)
 
-***
+---
 
 ### details?
 
@@ -50,13 +50,13 @@ Optional additional details
 
 #### Index Signature
 
- \[`key`: `string`\]: `any`
+\[`key`: `string`\]: `any`
 
 #### Defined in
 
 [packages/core/src/types.ts:514](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L514)
 
-***
+---
 
 ### email?
 
@@ -68,7 +68,7 @@ Optional email
 
 [packages/core/src/types.ts:517](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L517)
 
-***
+---
 
 ### avatarUrl?
 

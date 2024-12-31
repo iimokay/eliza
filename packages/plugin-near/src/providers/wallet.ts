@@ -1,5 +1,5 @@
 import { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
-import { KeyPair, keyStores, connect, Account, utils } from "near-api-js";
+import { Account, connect, KeyPair, keyStores, utils } from "near-api-js";
 import BigNumber from "bignumber.js";
 import { KeyPairString } from "near-api-js/lib/utils";
 import NodeCache from "node-cache";

@@ -2,9 +2,10 @@ import {
     elizaLogger,
     IAgentRuntime,
     ITranscriptionService,
+    Service,
+    ServiceType,
     settings,
 } from "@elizaos/core";
-import { Service, ServiceType } from "@elizaos/core";
 import { exec } from "child_process";
 import { File } from "formdata-node";
 import fs from "fs";

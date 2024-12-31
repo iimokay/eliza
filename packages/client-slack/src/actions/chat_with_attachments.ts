@@ -1,20 +1,18 @@
 import {
-    composeContext,
-    generateText,
-    trimTokens,
-    parseJSONObjectFromText,
-} from "@elizaos/core";
-import { models } from "@elizaos/core";
-import {
     Action,
     ActionExample,
+    composeContext,
     Content,
-    HandlerCallback,
+    generateText,
     Handler,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
+    models,
+    parseJSONObjectFromText,
     State,
+    trimTokens,
 } from "@elizaos/core";
 
 export const summarizationTemplate = `# Summarized so far (we are adding to this)

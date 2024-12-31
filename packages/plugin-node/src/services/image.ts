@@ -1,10 +1,11 @@
-import { elizaLogger, models } from "@elizaos/core";
-import { Service } from "@elizaos/core";
 import {
+    elizaLogger,
     IAgentRuntime,
-    ModelProviderName,
-    ServiceType,
     IImageDescriptionService,
+    ModelProviderName,
+    models,
+    Service,
+    ServiceType,
 } from "@elizaos/core";
 import {
     AutoProcessor,
@@ -21,6 +22,7 @@ import fs from "fs";
 import gifFrames from "gif-frames";
 import os from "os";
 import path from "path";
+import { realImgUrl } from "./fetchImg.ts";
 
 export class ImageDescriptionService
     extends Service
@@ -90,9 +92,10 @@ export class ImageDescriptionService
     }
 
     async describeImage(
-        imageUrl: string,
+        imgUrl: string,
         prompt?: string
     ): Promise<{ title: string; description: string }> {
+        const imageUrl = await realImgUrl(imgUrl);
         if (!this.initialized) {
             const model = models[this.runtime?.character?.modelProvider];
 
@@ -211,7 +214,7 @@ export class ImageDescriptionService
                 const endpoint =
                     models[this.runtime.imageModelProvider].endpoint ??
                     "https://api.openai.com/v1";
-                elizaLogger.log("Describe Image Completions", imageUrl)
+                elizaLogger.log("Describe Image Completions", imageUrl);
                 const response = await fetch(endpoint + "/chat/completions", {
                     method: "POST",
                     headers: {

@@ -1,29 +1,29 @@
 import { Coinbase, readContract, SmartContract } from "@coinbase/coinbase-sdk";
 import {
     Action,
-    Plugin,
+    composeContext,
     elizaLogger,
+    generateObject,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    HandlerCallback,
-    State,
-    composeContext,
-    generateObject,
     ModelClass,
+    Plugin,
+    State,
 } from "@elizaos/core";
 import { initializeWallet } from "../utils";
 import {
     contractInvocationTemplate,
-    tokenContractTemplate,
     readContractTemplate,
+    tokenContractTemplate,
 } from "../templates";
 import {
     ContractInvocationSchema,
-    TokenContractSchema,
     isContractInvocationContent,
+    isReadContractContent,
     isTokenContractContent,
     ReadContractSchema,
-    isReadContractContent,
+    TokenContractSchema,
 } from "../types";
 import path from "path";
 import { fileURLToPath } from "url";

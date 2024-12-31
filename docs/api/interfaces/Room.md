@@ -16,7 +16,7 @@ Unique identifier
 
 [packages/core/src/types.ts:539](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L539)
 
-***
+---
 
 ### participants
 

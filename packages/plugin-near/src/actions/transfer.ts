@@ -1,18 +1,18 @@
 import {
+    type Action,
     ActionExample,
+    composeContext,
     Content,
+    generateObject,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
-    composeContext,
-    generateObject,
 } from "@elizaos/core";
-import { connect, keyStores, utils } from "near-api-js";
+import { connect, keyStores, utils, utils as nearUtils } from "near-api-js";
 import { KeyPairString } from "near-api-js/lib/utils";
-import { utils as nearUtils } from "near-api-js";
+
 // import BigNumber from "bignumber.js";
 
 export interface TransferContent extends Content {

@@ -14,7 +14,7 @@ Properties
 
 [packages/core/src/types.ts:1046](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1046)
 
-***
+---
 
 ### serverUrl
 
@@ -24,7 +24,7 @@ Properties
 
 [packages/core/src/types.ts:1047](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1047)
 
-***
+---
 
 ### databaseAdapter
 
@@ -34,7 +34,7 @@ Properties
 
 [packages/core/src/types.ts:1048](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1048)
 
-***
+---
 
 ### token
 
@@ -44,7 +44,7 @@ Properties
 
 [packages/core/src/types.ts:1049](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1049)
 
-***
+---
 
 ### modelProvider
 
@@ -54,7 +54,7 @@ Properties
 
 [packages/core/src/types.ts:1050](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1050)
 
-***
+---
 
 ### imageModelProvider
 
@@ -64,7 +64,7 @@ Properties
 
 [packages/core/src/types.ts:1051](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1051)
 
-***
+---
 
 ### character
 
@@ -74,7 +74,7 @@ Properties
 
 [packages/core/src/types.ts:1052](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1052)
 
-***
+---
 
 ### providers
 
@@ -84,7 +84,7 @@ Properties
 
 [packages/core/src/types.ts:1053](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1053)
 
-***
+---
 
 ### actions
 
@@ -94,7 +94,7 @@ Properties
 
 [packages/core/src/types.ts:1054](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1054)
 
-***
+---
 
 ### evaluators
 
@@ -104,7 +104,7 @@ Properties
 
 [packages/core/src/types.ts:1055](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1055)
 
-***
+---
 
 ### plugins
 
@@ -114,7 +114,7 @@ Properties
 
 [packages/core/src/types.ts:1056](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1056)
 
-***
+---
 
 ### fetch()?
 
@@ -136,7 +136,7 @@ Properties
 
 [packages/core/src/types.ts:1058](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1058)
 
-***
+---
 
 ### messageManager
 
@@ -146,7 +146,7 @@ Properties
 
 [packages/core/src/types.ts:1060](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1060)
 
-***
+---
 
 ### descriptionManager
 
@@ -156,7 +156,7 @@ Properties
 
 [packages/core/src/types.ts:1061](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1061)
 
-***
+---
 
 ### documentsManager
 
@@ -166,7 +166,7 @@ Properties
 
 [packages/core/src/types.ts:1062](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1062)
 
-***
+---
 
 ### knowledgeManager
 
@@ -176,7 +176,7 @@ Properties
 
 [packages/core/src/types.ts:1063](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1063)
 
-***
+---
 
 ### loreManager
 
@@ -186,7 +186,7 @@ Properties
 
 [packages/core/src/types.ts:1064](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1064)
 
-***
+---
 
 ### cacheManager
 
@@ -196,7 +196,7 @@ Properties
 
 [packages/core/src/types.ts:1066](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1066)
 
-***
+---
 
 ### services
 
@@ -206,7 +206,7 @@ Properties
 
 [packages/core/src/types.ts:1068](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1068)
 
-***
+---
 
 ### clients
 
@@ -233,7 +233,7 @@ but I think the real solution is forthcoming as a base client interface
 
 [packages/core/src/types.ts:1073](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1073)
 
-***
+---
 
 ### registerMemoryManager()
 
@@ -251,7 +251,7 @@ but I think the real solution is forthcoming as a base client interface
 
 [packages/core/src/types.ts:1075](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1075)
 
-***
+---
 
 ### getMemoryManager()
 
@@ -269,7 +269,7 @@ but I think the real solution is forthcoming as a base client interface
 
 [packages/core/src/types.ts:1077](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1077)
 
-***
+---
 
 ### getService()
 
@@ -277,7 +277,7 @@ but I think the real solution is forthcoming as a base client interface
 
 #### Type Parameters
 
-• **T** *extends* [`Service`](../classes/Service.md)
+• **T** _extends_ [`Service`](../classes/Service.md)
 
 #### Parameters
 
@@ -291,7 +291,7 @@ but I think the real solution is forthcoming as a base client interface
 
 [packages/core/src/types.ts:1079](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1079)
 
-***
+---
 
 ### registerService()
 
@@ -309,7 +309,7 @@ but I think the real solution is forthcoming as a base client interface
 
 [packages/core/src/types.ts:1081](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1081)
 
-***
+---
 
 ### getSetting()
 
@@ -327,7 +327,7 @@ but I think the real solution is forthcoming as a base client interface
 
 [packages/core/src/types.ts:1083](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1083)
 
-***
+---
 
 ### getConversationLength()
 
@@ -343,7 +343,7 @@ Methods
 
 [packages/core/src/types.ts:1086](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1086)
 
-***
+---
 
 ### processActions()
 
@@ -367,7 +367,7 @@ Methods
 
 [packages/core/src/types.ts:1088](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1088)
 
-***
+---
 
 ### evaluate()
 
@@ -391,7 +391,7 @@ Methods
 
 [packages/core/src/types.ts:1095](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1095)
 
-***
+---
 
 ### ensureParticipantExists()
 
@@ -411,7 +411,7 @@ Methods
 
 [packages/core/src/types.ts:1102](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1102)
 
-***
+---
 
 ### ensureUserExists()
 
@@ -435,7 +435,7 @@ Methods
 
 [packages/core/src/types.ts:1104](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1104)
 
-***
+---
 
 ### registerAction()
 
@@ -453,7 +453,7 @@ Methods
 
 [packages/core/src/types.ts:1111](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1111)
 
-***
+---
 
 ### ensureConnection()
 
@@ -479,7 +479,7 @@ Methods
 
 [packages/core/src/types.ts:1113](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1113)
 
-***
+---
 
 ### ensureParticipantInRoom()
 
@@ -499,7 +499,7 @@ Methods
 
 [packages/core/src/types.ts:1121](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1121)
 
-***
+---
 
 ### ensureRoomExists()
 
@@ -517,7 +517,7 @@ Methods
 
 [packages/core/src/types.ts:1123](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1123)
 
-***
+---
 
 ### composeState()
 
@@ -537,7 +537,7 @@ Methods
 
 [packages/core/src/types.ts:1125](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1125)
 
-***
+---
 
 ### updateRecentMessageState()
 

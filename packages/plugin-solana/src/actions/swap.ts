@@ -1,4 +1,5 @@
 import {
+    type Action,
     ActionExample,
     composeContext,
     generateObjectDeprecated,
@@ -8,7 +9,6 @@ import {
     ModelClass,
     settings,
     State,
-    type Action,
 } from "@elizaos/core";
 import { Connection, PublicKey, VersionedTransaction } from "@solana/web3.js";
 import BigNumber from "bignumber.js";

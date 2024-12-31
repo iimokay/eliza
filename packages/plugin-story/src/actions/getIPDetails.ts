@@ -3,9 +3,9 @@ import {
     elizaLogger,
     generateObjectDeprecated,
     HandlerCallback,
-    ModelClass,
     IAgentRuntime,
     Memory,
+    ModelClass,
     State,
 } from "@elizaos/core";
 import { getIPDetailsTemplate } from "../templates";

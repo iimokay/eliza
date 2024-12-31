@@ -1,17 +1,18 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import {
-    type Memory,
-    type Goal,
-    type Relationship,
-    Actor,
-    GoalStatus,
     Account,
-    type UUID,
+    Actor,
+    DatabaseAdapter,
+    type Goal,
+    GoalStatus,
+    type Memory,
     Participant,
+    type Relationship,
     Room,
+    type UUID,
 } from "@elizaos/core";
-import { DatabaseAdapter } from "@elizaos/core";
 import { v4 as uuid } from "uuid";
+
 export class SupabaseDatabaseAdapter extends DatabaseAdapter {
     async getRoom(roomId: UUID): Promise<UUID | null> {
         const { data, error } = await this.supabase

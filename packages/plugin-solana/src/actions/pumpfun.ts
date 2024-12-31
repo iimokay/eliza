@@ -1,25 +1,28 @@
-import { AnchorProvider } from "@coral-xyz/anchor";
-import { Wallet } from "@coral-xyz/anchor";
-import { generateImage } from "@elizaos/core";
-import { Connection, Keypair, PublicKey } from "@solana/web3.js";
-import { CreateTokenMetadata, PriorityFee, PumpFunSDK } from "pumpdotfun-sdk";
-
-import { getAssociatedTokenAddressSync } from "@solana/spl-token";
+import { AnchorProvider, Wallet } from "@coral-xyz/anchor";
 import {
-    settings,
+    type Action,
     ActionExample,
+    composeContext,
     Content,
+    generateImage,
+    generateObjectDeprecated,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
+    settings,
     State,
-    generateObjectDeprecated,
-    composeContext,
-    type Action,
 } from "@elizaos/core";
+import { Connection, Keypair, PublicKey } from "@solana/web3.js";
+import { CreateTokenMetadata, PriorityFee, PumpFunSDK } from "pumpdotfun-sdk";
+
+import { getAssociatedTokenAddressSync } from "@solana/spl-token";
 
 import { walletProvider } from "../providers/wallet.ts";
+// Save the base64 data to a file
+import * as fs from "fs";
+import * as path from "path";
+import { getWalletKey } from "../keypairUtils.ts";
 
 export interface CreateAndBuyContent extends Content {
     tokenMetadata: {
@@ -236,11 +239,6 @@ export const sellToken = async ({
 const promptConfirmation = async (): Promise<boolean> => {
     return true;
 };
-
-// Save the base64 data to a file
-import * as fs from "fs";
-import * as path from "path";
-import { getWalletKey } from "../keypairUtils.ts";
 
 const pumpfunTemplate = `Respond with a JSON markdown block containing only the extracted values. Use null for any values that cannot be determined.
 

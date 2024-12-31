@@ -14,7 +14,7 @@ Configuration options for generating objects with a model.
 
 [packages/core/src/generation.ts:1266](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1266)
 
-***
+---
 
 ### context
 
@@ -24,7 +24,7 @@ Configuration options for generating objects with a model.
 
 [packages/core/src/generation.ts:1267](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1267)
 
-***
+---
 
 ### modelClass
 
@@ -34,7 +34,7 @@ Configuration options for generating objects with a model.
 
 [packages/core/src/generation.ts:1268](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1268)
 
-***
+---
 
 ### schema?
 
@@ -44,7 +44,7 @@ Configuration options for generating objects with a model.
 
 [packages/core/src/generation.ts:1269](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1269)
 
-***
+---
 
 ### schemaName?
 
@@ -54,7 +54,7 @@ Configuration options for generating objects with a model.
 
 [packages/core/src/generation.ts:1270](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1270)
 
-***
+---
 
 ### schemaDescription?
 
@@ -64,7 +64,7 @@ Configuration options for generating objects with a model.
 
 [packages/core/src/generation.ts:1271](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1271)
 
-***
+---
 
 ### stop?
 
@@ -74,7 +74,7 @@ Configuration options for generating objects with a model.
 
 [packages/core/src/generation.ts:1272](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1272)
 
-***
+---
 
 ### mode?
 
@@ -84,11 +84,11 @@ Configuration options for generating objects with a model.
 
 [packages/core/src/generation.ts:1273](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1273)
 
-***
+---
 
-### experimental\_providerMetadata?
+### experimental_providerMetadata?
 
-> `optional` **experimental\_providerMetadata**: `Record`\<`string`, `unknown`\>
+> `optional` **experimental_providerMetadata**: `Record`\<`string`, `unknown`\>
 
 #### Defined in
 

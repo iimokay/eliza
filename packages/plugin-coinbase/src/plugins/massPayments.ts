@@ -1,22 +1,22 @@
 import { Coinbase, Wallet } from "@coinbase/coinbase-sdk";
 import {
+    Action,
     composeContext,
     elizaLogger,
     generateObject,
-    ModelClass,
-    Action,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
+    ModelClass,
+    Plugin,
     Provider,
     State,
-    HandlerCallback,
-    Plugin,
 } from "@elizaos/core";
 import {
-    TransferSchema,
     isTransferContent,
-    TransferContent,
     Transaction,
+    TransferContent,
+    TransferSchema,
 } from "../types";
 import { transferTemplate } from "../templates";
 import { readFile } from "fs/promises";

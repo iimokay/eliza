@@ -1,4 +1,4 @@
-import type { IAgentRuntime, Provider, Memory, State } from "@elizaos/core";
+import type { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
 import { Provider as FuelProvider, Wallet, WalletUnlocked } from "fuels";
 
 export class WalletProvider {

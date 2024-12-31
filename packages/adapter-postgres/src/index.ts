@@ -1,10 +1,7 @@
 import { v4 } from "uuid";
 
 // Import the entire module as default
-import pg from "pg";
-type Pool = pg.Pool;
-
-import {
+import pg, {
     QueryConfig,
     QueryConfigValues,
     QueryResult,
@@ -13,21 +10,23 @@ import {
 import {
     Account,
     Actor,
-    GoalStatus,
+    DatabaseAdapter,
+    elizaLogger,
+    EmbeddingProvider,
+    getEmbeddingConfig,
     type Goal,
+    GoalStatus,
+    type IDatabaseCacheAdapter,
     type Memory,
+    Participant,
     type Relationship,
     type UUID,
-    type IDatabaseCacheAdapter,
-    Participant,
-    elizaLogger,
-    getEmbeddingConfig,
-    DatabaseAdapter,
-    EmbeddingProvider,
 } from "@elizaos/core";
 import fs from "fs";
 import { fileURLToPath } from "url";
 import path from "path";
+
+type Pool = pg.Pool;
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory

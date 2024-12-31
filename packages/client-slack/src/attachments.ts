@@ -1,9 +1,5 @@
 import {
     generateText,
-    trimTokens,
-    parseJSONObjectFromText,
-} from "@elizaos/core";
-import {
     IAgentRuntime,
     IImageDescriptionService,
     IPdfService,
@@ -11,7 +7,9 @@ import {
     IVideoService,
     Media,
     ModelClass,
+    parseJSONObjectFromText,
     ServiceType,
+    trimTokens,
 } from "@elizaos/core";
 import { WebClient } from "@slack/web-api";
 import ffmpeg from "fluent-ffmpeg";

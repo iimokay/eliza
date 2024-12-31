@@ -1,6 +1,6 @@
 import { AgentRuntime } from "./runtime.ts";
 import { embed, getEmbeddingZeroVector } from "./embedding.ts";
-import { KnowledgeItem, UUID, type Memory } from "./types.ts";
+import { KnowledgeItem, type Memory, UUID } from "./types.ts";
 import { stringToUuid } from "./uuid.ts";
 import { splitChunks } from "./generation.ts";
 import elizaLogger from "./logger.ts";

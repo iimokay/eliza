@@ -1,25 +1,23 @@
-import {
-    ProcessedTokenData,
-    TokenSecurityData,
-    // TokenTradeData,
-    // DexScreenerData,
-    // DexScreenerPair,
-    // HolderData,
-} from "../types/token.ts";
+import { ProcessedTokenData, TokenSecurityData } from "../types/token.ts";
 import { Connection, PublicKey } from "@solana/web3.js";
 import { getAssociatedTokenAddress } from "@solana/spl-token";
 import { TokenProvider } from "./token.ts";
 import { WalletProvider } from "./wallet.ts";
 import { SimulationSellingService } from "./simulationSellingService.ts";
 import {
-    TrustScoreDatabase,
     RecommenderMetrics,
     TokenPerformance,
-    TradePerformance,
     TokenRecommendation,
+    TradePerformance,
+    TrustScoreDatabase,
 } from "@elizaos/plugin-trustdb";
-import { settings } from "@elizaos/core";
-import { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
+import {
+    IAgentRuntime,
+    Memory,
+    Provider,
+    settings,
+    State,
+} from "@elizaos/core";
 import { v4 as uuidv4 } from "uuid";
 
 const Wallet = settings.MAIN_WALLET_ADDRESS;

@@ -1,5 +1,5 @@
 import puppeteer from "puppeteer";
-import {elizaLogger} from "@elizaos/core";
+import { elizaLogger } from "@elizaos/core";
 
 /**
  * 获取短链接的重定向目标
@@ -7,7 +7,7 @@ import {elizaLogger} from "@elizaos/core";
  * @returns {Promise<string>} - 返回重定向后的目标 URL
  */
 async function resolveShortUrl(shortUrl: string): Promise<string> {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({ headless: "new" });
     const page = await browser.newPage();
 
     try {
@@ -36,7 +36,7 @@ async function resolveShortUrl(shortUrl: string): Promise<string> {
  * @returns {Promise<string[]>} - 返回图片地址数组
  */
 async function extractImageUrls(url: string): Promise<string[]> {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({ headless: "new" });
     const page = await browser.newPage();
 
     try {

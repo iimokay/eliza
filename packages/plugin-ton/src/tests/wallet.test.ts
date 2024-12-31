@@ -1,18 +1,18 @@
 import { defaultCharacter } from "@elizaos/core";
 
 import {
-    describe,
-    it,
-    vi,
-    expect,
+    afterEach,
     beforeAll,
     beforeEach,
-    afterEach,
+    describe,
+    expect,
+    it,
+    vi,
 } from "vitest";
 import BigNumber from "bignumber.js";
 import { WalletProvider } from "../providers/wallet";
 
-import { mnemonicNew, mnemonicToPrivateKey, KeyPair } from "@ton/crypto";
+import { KeyPair, mnemonicNew, mnemonicToPrivateKey } from "@ton/crypto";
 
 // Mock NodeCache
 vi.mock("node-cache", () => {

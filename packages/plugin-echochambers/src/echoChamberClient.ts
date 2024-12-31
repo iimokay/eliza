@@ -3,10 +3,10 @@ import {
     ChatMessage,
     ChatRoom,
     EchoChamberConfig,
-    ModelInfo,
     ListRoomsResponse,
-    RoomHistoryResponse,
     MessageResponse,
+    ModelInfo,
+    RoomHistoryResponse,
 } from "./types";
 
 const MAX_RETRIES = 3;

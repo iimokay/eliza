@@ -156,10 +156,10 @@ function parseNamespacedSettings(env: Settings): NamespacedSettings {
     for (const [key, value] of Object.entries(env)) {
         if (!value) continue;
 
-        const [namespace, ...rest] = key.split('.');
+        const [namespace, ...rest] = key.split(".");
         if (!namespace || rest.length === 0) continue;
 
-        const settingKey = rest.join('.');
+        const settingKey = rest.join(".");
         namespaced[namespace] = namespaced[namespace] || {};
         namespaced[namespace][settingKey] = value;
     }

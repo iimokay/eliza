@@ -1,7 +1,7 @@
 import {
     ButtplugClient,
-    ButtplugNodeWebsocketClientConnector,
     ButtplugClientDevice,
+    ButtplugNodeWebsocketClientConnector,
 } from "buttplug";
 import { LovenseNora } from "./fake-buttplug";
 

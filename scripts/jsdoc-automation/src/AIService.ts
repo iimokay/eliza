@@ -1,5 +1,5 @@
 import { ChatOpenAI } from "@langchain/openai";
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 
 dotenv.config();
 
@@ -11,12 +11,12 @@ export class AIService {
 
     /**
      * Constructor for initializing the ChatOpenAI instance.
-     * 
+     *
      * @throws {Error} If OPENAI_API_KEY environment variable is not set.
      */
     constructor() {
         if (!process.env.OPENAI_API_KEY) {
-            throw new Error('OPENAI_API_KEY is not set');
+            throw new Error("OPENAI_API_KEY is not set");
         }
         this.chatModel = new ChatOpenAI({ apiKey: process.env.OPENAI_API_KEY });
     }
@@ -32,18 +32,18 @@ export class AIService {
             return response.content as string;
         } catch (error) {
             this.handleAPIError(error as Error);
-            return '';
+            return "";
         }
     }
 
     /**
      * Handle API errors by logging the error message and throwing the error.
-     * 
+     *
      * @param {Error} error The error object to handle
      * @returns {void}
      */
     public handleAPIError(error: Error): void {
-        console.error('API Error:', error.message);
+        console.error("API Error:", error.message);
         throw error;
     }
 }

@@ -1,8 +1,8 @@
 import {
     createRelationship,
+    formatRelationships,
     getRelationship,
     getRelationships,
-    formatRelationships,
 } from "../relationships";
 import { IAgentRuntime, type Relationship, type UUID } from "../types";
 import { describe, expect, vi } from "vitest";

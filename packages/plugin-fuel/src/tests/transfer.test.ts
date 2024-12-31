@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
 
 import { TransferAction } from "../actions/transfer";
 import { WalletProvider } from "../providers/wallet";

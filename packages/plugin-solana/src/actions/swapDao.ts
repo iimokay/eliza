@@ -1,8 +1,8 @@
 import {
+    type Action,
     ActionExample,
     IAgentRuntime,
     Memory,
-    type Action,
 } from "@elizaos/core";
 import { Connection, Keypair, PublicKey, Transaction } from "@solana/web3.js";
 import { getQuote } from "./swapUtils.ts";

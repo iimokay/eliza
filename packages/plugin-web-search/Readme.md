@@ -19,21 +19,21 @@ The `search` handler executes web search queries with specified parameters, retu
 #### Usage
 
 ```typescript
-import { WebSearch } from 'web-search-plugin';
+import { WebSearch } from "web-search-plugin";
 
 const search = new WebSearch({
-  apiEndpoint: 'https://api.example.com/search',
-  timeout: 5000,
+    apiEndpoint: "https://api.example.com/search",
+    timeout: 5000,
 });
 
 try {
-  const results = await search.query('example query', {
-    limit: 10,
-    sortBy: 'relevance',
-  });
-  console.log('Search Results:', results);
+    const results = await search.query("example query", {
+        limit: 10,
+        sortBy: "relevance",
+    });
+    console.log("Search Results:", results);
 } catch (error) {
-  console.error('Search failed:', error);
+    console.error("Search failed:", error);
 }
 ```
 
@@ -66,13 +66,13 @@ Ensure your `tsconfig.json` is properly configured:
 
 ```json
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "CommonJS",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
-  }
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "CommonJS",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true
+    }
 }
 ```
 
@@ -81,18 +81,18 @@ Ensure your `tsconfig.json` is properly configured:
 Streamline your search operations with the following example:
 
 ```typescript
-import { WebSearch } from 'web-search-plugin';
+import { WebSearch } from "web-search-plugin";
 
-const search = new WebSearch({ apiEndpoint: 'https://api.example.com/search' });
+const search = new WebSearch({ apiEndpoint: "https://api.example.com/search" });
 
 (async () => {
-  try {
-    // Execute a search query
-    const results = await search.query('example', { limit: 5 });
-    console.log('Search Results:', results);
-  } catch (error) {
-    console.error('Error executing search:', error);
-  }
+    try {
+        // Execute a search query
+        const results = await search.query("example", { limit: 5 });
+        console.log("Search Results:", results);
+    } catch (error) {
+        console.error("Error executing search:", error);
+    }
 })();
 ```
 
@@ -102,22 +102,22 @@ To test locally, you can set up a mock server for the API endpoint:
 
 1. Install `json-server`:
 
-   ```bash
-   npm install -g json-server
-   ```
+    ```bash
+    npm install -g json-server
+    ```
 
 2. Create a `db.json` file with mock search data.
 
 3. Start the mock server:
 
-   ```bash
-   json-server --watch db.json --port 3000
-   ```
+    ```bash
+    json-server --watch db.json --port 3000
+    ```
 
 4. Update your `.env` file:
-   ```env
-   API_ENDPOINT=http://localhost:3000
-   ```
+    ```env
+    API_ENDPOINT=http://localhost:3000
+    ```
 
 ## Common Issues
 
@@ -142,14 +142,14 @@ This plugin relies on the following:
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/your-repo/web-search-plugin.git
-   ```
+    ```bash
+    git clone https://github.com/your-repo/web-search-plugin.git
+    ```
 
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 
 ### Testing
 

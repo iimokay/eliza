@@ -1,6 +1,6 @@
 import {
-    SqliteDatabaseAdapter,
     loadVecExtensions,
+    SqliteDatabaseAdapter,
 } from "@elizaos/adapter-sqlite";
 import { SqlJsDatabaseAdapter } from "@elizaos/adapter-sqljs";
 import { SupabaseDatabaseAdapter } from "@elizaos/adapter-supabase";

@@ -1,4 +1,4 @@
-import { WhatsAppMessage, WhatsAppTemplate, WhatsAppConfig } from "../types";
+import { WhatsAppConfig, WhatsAppMessage, WhatsAppTemplate } from "../types";
 
 export function validateConfig(config: WhatsAppConfig): void {
     if (!config.accessToken) {

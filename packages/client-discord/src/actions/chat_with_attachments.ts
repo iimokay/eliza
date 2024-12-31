@@ -1,18 +1,19 @@
-import { composeContext } from "@elizaos/core";
-import { generateText, trimTokens } from "@elizaos/core";
-import type { TiktokenModel } from "js-tiktoken";
-import { models } from "@elizaos/core";
-import { parseJSONObjectFromText } from "@elizaos/core";
 import {
     Action,
     ActionExample,
+    composeContext,
     Content,
+    generateText,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
+    models,
+    parseJSONObjectFromText,
     State,
+    trimTokens,
 } from "@elizaos/core";
+import type { TiktokenModel } from "js-tiktoken";
 import * as fs from "fs";
 
 export const summarizationTemplate = `# Summarized so far (we are adding to this)

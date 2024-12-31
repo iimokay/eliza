@@ -1,22 +1,22 @@
 import {
+    type Action,
     ActionExample,
+    composeContext,
+    generateObject,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
-    composeContext,
-    generateObject,
 } from "@elizaos/core";
 import { connect, keyStores, utils } from "near-api-js";
 import {
-    init_env,
-    ftGetTokenMetadata,
     estimateSwap,
-    instantSwap,
     fetchAllPools,
     FT_MINIMUM_STORAGE_BALANCE_LARGE,
+    ftGetTokenMetadata,
+    init_env,
+    instantSwap,
     ONE_YOCTO_NEAR,
 } from "@ref-finance/ref-sdk";
 import { walletProvider } from "../providers/wallet";

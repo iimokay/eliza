@@ -62,11 +62,11 @@ res.sendStatus(200);
 
 ## Features
 
--   Send text messages
--   Send template messages
--   Webhook verification
--   Webhook event handling
--   Message status updates
+- Send text messages
+- Send template messages
+- Webhook verification
+- Webhook event handling
+- Message status updates
 
 ## API Reference
 
@@ -74,13 +74,13 @@ res.sendStatus(200);
 
 #### Constructor
 
--   `config: WhatsAppConfig` - Configuration object for the plugin
+- `config: WhatsAppConfig` - Configuration object for the plugin
 
 #### Methods
 
--   `sendMessage(message: WhatsAppMessage): Promise<any>` - Send a WhatsApp message
--   `handleWebhook(event: WhatsAppWebhookEvent): Promise<void>` - Process incoming webhook events
--   `verifyWebhook(token: string): Promise<boolean>` - Verify webhook token
+- `sendMessage(message: WhatsAppMessage): Promise<any>` - Send a WhatsApp message
+- `handleWebhook(event: WhatsAppWebhookEvent): Promise<void>` - Process incoming webhook events
+- `verifyWebhook(token: string): Promise<boolean>` - Verify webhook token
 
 ### Types
 
@@ -114,10 +114,10 @@ text?: string;
 
 The plugin throws errors in the following cases:
 
--   Invalid configuration
--   Failed message sending
--   Webhook verification failure
--   Invalid webhook payload
+- Invalid configuration
+- Failed message sending
+- Webhook verification failure
+- Invalid webhook payload
 
 Example error handling:
 

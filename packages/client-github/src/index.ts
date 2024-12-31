@@ -6,9 +6,9 @@ import fs from "fs/promises";
 import { existsSync } from "fs";
 import { createHash } from "crypto";
 import {
-    elizaLogger,
     AgentRuntime,
     Client,
+    elizaLogger,
     IAgentRuntime,
     knowledge,
     stringToUuid,
@@ -83,7 +83,9 @@ export class GitHubClient {
                 );
                 return;
             } catch {
-                elizaLogger.error(`Failed to clone repository from ${repositoryUrl}. Retrying...`);
+                elizaLogger.error(
+                    `Failed to clone repository from ${repositoryUrl}. Retrying...`
+                );
                 retries++;
                 if (retries === maxRetries) {
                     throw new Error(

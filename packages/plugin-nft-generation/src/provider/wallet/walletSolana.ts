@@ -19,7 +19,6 @@ import {
     keypairIdentity,
     percentAmount,
     publicKey,
-    // sol,
     TransactionBuilder,
     Umi,
 } from "@metaplex-foundation/umi";

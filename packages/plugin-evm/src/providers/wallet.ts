@@ -1,3 +1,12 @@
+import type {
+    Account,
+    Address,
+    Chain,
+    HttpTransport,
+    PrivateKeyAccount,
+    PublicClient,
+    WalletClient,
+} from "viem";
 import {
     createPublicClient,
     createWalletClient,
@@ -5,16 +14,7 @@ import {
     http,
 } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import type { IAgentRuntime, Provider, Memory, State } from "@elizaos/core";
-import type {
-    Address,
-    WalletClient,
-    PublicClient,
-    Chain,
-    HttpTransport,
-    Account,
-    PrivateKeyAccount,
-} from "viem";
+import type { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
 import * as viemChains from "viem/chains";
 
 import type { SupportedChain } from "../types";

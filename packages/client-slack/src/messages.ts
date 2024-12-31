@@ -1,22 +1,22 @@
 import {
-    stringToUuid,
-    getEmbeddingZeroVector,
     composeContext,
+    Content,
+    elizaLogger,
     generateMessageResponse,
     generateShouldRespond,
-    ModelClass,
-    Memory,
-    Content,
-    State,
-    elizaLogger,
+    getEmbeddingZeroVector,
     HandlerCallback,
+    IAgentRuntime,
+    Memory,
+    ModelClass,
+    State,
+    stringToUuid,
 } from "@elizaos/core";
 import {
     slackMessageHandlerTemplate,
     slackShouldRespondTemplate,
 } from "./templates";
 import { WebClient } from "@slack/web-api";
-import { IAgentRuntime } from "@elizaos/core";
 
 export class MessageManager {
     private client: WebClient;
