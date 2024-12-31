@@ -1,9 +1,10 @@
 import puppeteer from "puppeteer";
 import path from "path";
 import fs from "fs";
+import { elizaLogger } from "@elizaos/core";
 
 export async function kline() {
-    const browser = await puppeteer.launch({ headless: "new" });
+    const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
     // set win width and height
     await page.setViewport({
@@ -15,7 +16,8 @@ export async function kline() {
     await page.goto(
         "https://www.tradingview.com/chart/hIV4GuP8/?symbol=CFXUSDT&interval=1H"
     );
-    const imageDir = path.join(process.cwd(), "generatedKLines");
+    const imageDir = path.join(process.cwd(), "data", "generatedKLines");
+    elizaLogger.log("Usage: KLines", imageDir);
     if (!fs.existsSync(imageDir)) {
         fs.mkdirSync(imageDir, { recursive: true });
     }
