@@ -1,18 +1,19 @@
 import { Tweet } from "agent-twitter-client";
 import {
     composeContext,
+    elizaLogger,
     generateText,
+    generateTweetActions,
     getEmbeddingZeroVector,
     IAgentRuntime,
+    IImageDescriptionService,
     ModelClass,
+    postActionResponseFooter,
+    ServiceType,
     stringToUuid,
     UUID,
 } from "@elizaos/core";
-import { elizaLogger } from "@elizaos/core";
 import { ClientBase } from "./base.ts";
-import { postActionResponseFooter } from "@elizaos/core";
-import { generateTweetActions } from "@elizaos/core";
-import { IImageDescriptionService, ServiceType } from "@elizaos/core";
 import { buildConversationThread } from "./utils.ts";
 import { twitterMessageHandlerTemplate } from "./interactions.ts";
 import { DEFAULT_MAX_TWEET_LENGTH } from "./environment.ts";
@@ -184,8 +185,9 @@ export class TwitterPostClient {
                             `Next action processing scheduled in ${actionInterval / 1000} seconds`
                         );
                         // Wait for the full interval before next processing
-                        await new Promise((resolve) =>
-                            setTimeout(resolve, actionInterval * 60 * 1000) // now in minutes
+                        await new Promise(
+                            (resolve) =>
+                                setTimeout(resolve, actionInterval * 60 * 1000) // now in minutes
                         );
                     }
                 } catch (error) {
@@ -211,7 +213,10 @@ export class TwitterPostClient {
             elizaLogger.log("Tweet generation loop disabled (dry run mode)");
         }
 
-        if (this.client.twitterConfig.ENABLE_ACTION_PROCESSING && !this.isDryRun) {
+        if (
+            this.client.twitterConfig.ENABLE_ACTION_PROCESSING &&
+            !this.isDryRun
+        ) {
             processActionsLoop().catch((error) => {
                 elizaLogger.error(
                     "Fatal error in process actions loop:",
@@ -436,30 +441,32 @@ export class TwitterPostClient {
 
             elizaLogger.log("generate post prompt:\n" + context);
 
-            // const newTweetContent1 = await generateText({
-            //     runtime: this.runtime,
-            //     context,
-            //     modelClass: ModelClass.SMALL,
-            // });
             const klinePath = await kline();
-
-            const { title: newTweetContent, description } = await this.runtime
-                .getService<IImageDescriptionService>(
-                    ServiceType.IMAGE_DESCRIPTION
-                )
-                .describeImage(
-                    klinePath,
-                    "Analysis Trends, Limit within 280 characters"
-                );
+            let newTweetContent = "";
+            if (klinePath) {
+                const { title, description } = await this.runtime
+                    .getService<IImageDescriptionService>(
+                        ServiceType.IMAGE_DESCRIPTION
+                    )
+                    .describeImage(
+                        klinePath,
+                        "Analysis Trends, Limit within 280 characters"
+                    );
+                newTweetContent = title ?? description;
+            } else {
+                newTweetContent = await generateText({
+                    runtime: this.runtime,
+                    context,
+                    modelClass: ModelClass.SMALL,
+                });
+            }
 
             // First attempt to clean content
             let cleanedContent = "";
 
             // Try parsing as JSON first
             try {
-                const parsedResponse = JSON.parse(
-                    newTweetContent ?? description
-                );
+                const parsedResponse = JSON.parse(newTweetContent);
                 if (parsedResponse.text) {
                     cleanedContent = parsedResponse.text;
                 } else if (typeof parsedResponse === "string") {
@@ -488,7 +495,7 @@ export class TwitterPostClient {
             }
 
             // Truncate the content to the maximum tweet length specified in the environment settings, ensuring the truncation respects sentence boundaries.
-            const maxTweetLength = this.client.twitterConfig.MAX_TWEET_LENGTH
+            const maxTweetLength = this.client.twitterConfig.MAX_TWEET_LENGTH;
             if (maxTweetLength) {
                 cleanedContent = truncateToCompleteSentence(
                     cleanedContent,
