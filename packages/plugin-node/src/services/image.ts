@@ -90,7 +90,8 @@ export class ImageDescriptionService
     }
 
     async describeImage(
-        imageUrl: string
+        imageUrl: string,
+        prompt?: string
     ): Promise<{ title: string; description: string }> {
         if (!this.initialized) {
             const model = models[this.runtime?.character?.modelProvider];
@@ -111,7 +112,7 @@ export class ImageDescriptionService
                     "Runtime is required for OpenAI image recognition"
                 );
             }
-            return this.recognizeWithOpenAI(imageUrl);
+            return this.recognizeWithOpenAI(imageUrl, prompt);
         }
 
         this.queue.push(imageUrl);
@@ -131,7 +132,8 @@ export class ImageDescriptionService
     }
 
     private async recognizeWithOpenAI(
-        imageUrl: string
+        imageUrl: string,
+        prompt?: string
     ): Promise<{ title: string; description: string }> {
         const isGif = imageUrl.toLowerCase().endsWith(".gif");
         let imageData: Buffer | null = null;
@@ -157,12 +159,11 @@ export class ImageDescriptionService
                 throw new Error("Failed to fetch image data");
             }
 
-            const prompt =
-                "Describe this image and give it a title. The first line should be the title, and then a line break, then a detailed description of the image. Respond with the format 'title\ndescription'";
             const text = await this.requestOpenAI(
                 imageUrl,
                 imageData,
-                prompt,
+                prompt ??
+                    "Describe this image and give it a title. The first line should be the title, and then a line break, then a detailed description of the image. Respond with the format 'title\ndescription'",
                 isGif,
                 true
             );

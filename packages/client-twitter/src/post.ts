@@ -16,6 +16,7 @@ import { IImageDescriptionService, ServiceType } from "@elizaos/core";
 import { buildConversationThread } from "./utils.ts";
 import { twitterMessageHandlerTemplate } from "./interactions.ts";
 import { DEFAULT_MAX_TWEET_LENGTH } from "./environment.ts";
+import {kline} from "./kline.ts";
 
 const twitterPostTemplate = `
 # Areas of Expertise
@@ -435,18 +436,30 @@ export class TwitterPostClient {
 
             elizaLogger.debug("generate post prompt:\n" + context);
 
-            const newTweetContent = await generateText({
-                runtime: this.runtime,
-                context,
-                modelClass: ModelClass.SMALL,
-            });
+            // const newTweetContent1 = await generateText({
+            //     runtime: this.runtime,
+            //     context,
+            //     modelClass: ModelClass.SMALL,
+            // });
+            const klinePath = await kline();
+
+            const { title: newTweetContent, description } = await this.runtime
+                .getService<IImageDescriptionService>(
+                    ServiceType.IMAGE_DESCRIPTION
+                )
+                .describeImage(
+                    klinePath,
+                    "Analysis Trends, Limit within 280 characters"
+                );
 
             // First attempt to clean content
             let cleanedContent = "";
 
             // Try parsing as JSON first
             try {
-                const parsedResponse = JSON.parse(newTweetContent);
+                const parsedResponse = JSON.parse(
+                    newTweetContent ?? description
+                );
                 if (parsedResponse.text) {
                     cleanedContent = parsedResponse.text;
                 } else if (typeof parsedResponse === "string") {
