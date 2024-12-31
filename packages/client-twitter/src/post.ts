@@ -16,7 +16,7 @@ import { IImageDescriptionService, ServiceType } from "@elizaos/core";
 import { buildConversationThread } from "./utils.ts";
 import { twitterMessageHandlerTemplate } from "./interactions.ts";
 import { DEFAULT_MAX_TWEET_LENGTH } from "./environment.ts";
-import {kline} from "./kline.ts";
+import { kline } from "./kline.ts";
 
 const twitterPostTemplate = `
 # Areas of Expertise
@@ -107,7 +107,7 @@ export class TwitterPostClient {
         this.client = client;
         this.runtime = runtime;
         this.twitterUsername = this.client.twitterConfig.TWITTER_USERNAME;
-        this.isDryRun = this.client.twitterConfig.TWITTER_DRY_RUN
+        this.isDryRun = this.client.twitterConfig.TWITTER_DRY_RUN;
 
         // Log configuration on initialization
         elizaLogger.log("Twitter Client Configuration:");
@@ -434,7 +434,7 @@ export class TwitterPostClient {
                     twitterPostTemplate,
             });
 
-            elizaLogger.debug("generate post prompt:\n" + context);
+            elizaLogger.log("generate post prompt:\n" + context);
 
             // const newTweetContent1 = await generateText({
             //     runtime: this.runtime,
