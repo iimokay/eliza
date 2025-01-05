@@ -5,6 +5,8 @@ import { elizaLogger } from "@elizaos/core";
 
 export async function kline() {
     try {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         const browser = await puppeteer.launch({ headless: "new" });
         const page = await browser.newPage();
         // set win width and height
@@ -31,7 +33,10 @@ export async function kline() {
         await chartElement?.screenshot({ path: filePath });
 
         await browser.close();
-        return filePath;
+        // Handle local file paths
+        //const mediaBuffer = await fs.promises.readFile(path.resolve(filePath));
+        const mediaBuffer = fs.readFileSync(filePath);
+        return { filePath, buffer: mediaBuffer, mediaType: "image/png" };
     } catch (error) {
         elizaLogger.error("Generating Kline Error", error);
         return null;
