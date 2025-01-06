@@ -1028,8 +1028,7 @@ async function uploadMedia(
   const headers = new Headers({
     authorization: `Bearer ${(auth as any).bearerToken}`,
     cookie: await auth.cookieJar().getCookieString(uploadUrl),
-    'x-csrf-token': xCsrfToken?.value as string,
-    'Content-Type': 'multipart/form-data',
+    'x-csrf-token': xCsrfToken?.value as string
   });
 
   // Detect if media is a video based on mediaType
