@@ -1028,7 +1028,8 @@ async function uploadMedia(
   const headers = new Headers({
     authorization: `Bearer ${(auth as any).bearerToken}`,
     cookie: await auth.cookieJar().getCookieString(uploadUrl),
-    'x-csrf-token': xCsrfToken?.value as string
+    'x-csrf-token': xCsrfToken?.value as string,
+      'Content-Type': 'application/x-www-form-urlencoded',
   });
 
   // Detect if media is a video based on mediaType
@@ -1040,13 +1041,14 @@ async function uploadMedia(
     return mediaId;
   } else {
     // Handle image upload
-    const form = new FormData();
-    form.append('media', new Blob([mediaData]));
-
+    const body = new URLSearchParams({
+      media_data: mediaData.toString("base64"), // 上传的媒体数据（Base64 编码）
+      media_category: 'tweet_image', // 媒体分类（根据需要调整）
+    });
     const response = await fetch(uploadUrl, {
       method: 'POST',
       headers,
-      body: form,
+      body,
     });
 
     await updateCookieJar(auth.cookieJar(), response.headers);
