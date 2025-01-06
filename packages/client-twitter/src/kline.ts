@@ -35,8 +35,8 @@ export async function kline() {
         await browser.close();
         // Handle local file paths
         //const mediaBuffer = await fs.promises.readFile(path.resolve(filePath));
-        const mediaBuffer = fs.readFileSync(filePath);
-        return { filePath, buffer: mediaBuffer, mediaType: "image/png" };
+        // const mediaBuffer = fs.readFileSync(filePath);
+        return { filePath, buffer: undefined, mediaType: "image/png" };
     } catch (error) {
         elizaLogger.error("Generating Kline Error", error);
         return null;
