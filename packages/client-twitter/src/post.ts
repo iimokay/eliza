@@ -316,7 +316,11 @@ export class TwitterPostClient {
         try {
             const noteTweetResult = await client.requestQueue.add(
                 async () =>
-                    await client.twitterClient.sendNoteTweet(content, tweetId, mediaData)
+                    await client.twitterClient.sendNoteTweet(
+                        content,
+                        tweetId,
+                        mediaData
+                    )
             );
 
             if (noteTweetResult.errors && noteTweetResult.errors.length > 0) {
@@ -342,7 +346,7 @@ export class TwitterPostClient {
 
     async sendStandardTweet(
         client: ClientBase,
-        content:string,
+        content: string,
         tweetId?: string,
         mediaData?: {
             data: Buffer;
@@ -352,7 +356,11 @@ export class TwitterPostClient {
         try {
             const standardTweetResult = await client.requestQueue.add(
                 async () =>
-                    await client.twitterClient.sendTweet(content, tweetId, mediaData)
+                    await client.twitterClient.sendTweet(
+                        content,
+                        tweetId,
+                        mediaData
+                    )
             );
             const body = await standardTweetResult.json();
             if (!body?.data?.create_tweet?.tweet_results?.result) {
@@ -392,7 +400,12 @@ export class TwitterPostClient {
                     mediaData
                 );
             } else {
-                result = await this.sendStandardTweet(client, cleanedContent, undefined, mediaData);
+                result = await this.sendStandardTweet(
+                    client,
+                    cleanedContent,
+                    undefined,
+                    mediaData
+                );
             }
 
             const tweet = this.createTweetObject(
@@ -456,7 +469,7 @@ export class TwitterPostClient {
 
             elizaLogger.log("generate post prompt:\n" + context);
 
-            const { filePath:klinePath, buffer ,mediaType} = await kline();
+            const { filePath: klinePath, buffer, mediaType } = await kline();
             let newTweetContent = "";
             if (klinePath) {
                 const { title, description } = await this.runtime
@@ -542,7 +555,7 @@ export class TwitterPostClient {
                     roomId,
                     newTweetContent,
                     this.twitterUsername,
-                    buffer ? [{data: buffer, mediaType}] : undefined
+                    buffer ? [{ data: buffer, mediaType }] : undefined
                 );
             } catch (error) {
                 elizaLogger.error("Error sending tweet:", error);

@@ -18,7 +18,7 @@ import {
  */
 // TODO: install and replace with uuidv4
 function generateRandomId(): string {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
         const r = (Math.random() * 16) | 0;
         const v = c === 'x' ? r : (r & 0x3) | 0x8;
         return v.toString(16);
@@ -53,7 +53,8 @@ export async function fetchAudioSpaceById(
         c9s_tweet_anatomy_moderator_badge_enabled: true,
         responsive_web_grok_analyze_button_fetch_trends_enabled: true,
         articles_preview_enabled: true,
-        responsive_web_graphql_skip_user_profile_image_extensions_enabled: false,
+        responsive_web_graphql_skip_user_profile_image_extensions_enabled:
+            false,
         responsive_web_edit_tweet_api_enabled: true,
         graphql_is_translatable_rweb_tweet_is_translatable_enabled: true,
         view_counts_everywhere_api_enabled: true,
@@ -75,7 +76,8 @@ export async function fetchAudioSpaceById(
 
     const url = `https://x.com/i/api/graphql/${queryId}/${operationName}?variables=${variablesEncoded}&features=${featuresEncoded}`;
 
-    const onboardingTaskUrl = 'https://api.twitter.com/1.1/onboarding/task.json';
+    const onboardingTaskUrl =
+        'https://api.twitter.com/1.1/onboarding/task.json';
 
     // Retrieve necessary cookies and tokens
     const cookies = await auth.cookieJar().getCookies(onboardingTaskUrl);
@@ -104,7 +106,9 @@ export async function fetchAudioSpaceById(
 
     // Check for errors in the response
     if (!response.ok) {
-        throw new Error(`Failed to fetch Audio Space: ${await response.text()}`);
+        throw new Error(
+            `Failed to fetch Audio Space: ${await response.text()}`,
+        );
     }
 
     const data: AudioSpaceByIdResponse = await response.json();
@@ -135,7 +139,8 @@ export async function fetchBrowseSpaceTopics(
 
     const url = `https://x.com/i/api/graphql/${queryId}/${operationName}?variables=${variablesEncoded}&features=${featuresEncoded}`;
 
-    const onboardingTaskUrl = 'https://api.twitter.com/1.1/onboarding/task.json';
+    const onboardingTaskUrl =
+        'https://api.twitter.com/1.1/onboarding/task.json';
 
     // Retrieve necessary cookies and tokens
     const cookies = await auth.cookieJar().getCookies(onboardingTaskUrl);
@@ -164,7 +169,9 @@ export async function fetchBrowseSpaceTopics(
 
     // Check for errors in the response
     if (!response.ok) {
-        throw new Error(`Failed to fetch Space Topics: ${await response.text()}`);
+        throw new Error(
+            `Failed to fetch Space Topics: ${await response.text()}`,
+        );
     }
 
     const data: BrowseSpaceTopicsResponse = await response.json();
@@ -198,7 +205,8 @@ export async function fetchCommunitySelectQuery(
 
     const url = `https://x.com/i/api/graphql/${queryId}/${operationName}?variables=${variablesEncoded}&features=${featuresEncoded}`;
 
-    const onboardingTaskUrl = 'https://api.twitter.com/1.1/onboarding/task.json';
+    const onboardingTaskUrl =
+        'https://api.twitter.com/1.1/onboarding/task.json';
 
     // Retrieve necessary cookies and tokens
     const cookies = await auth.cookieJar().getCookies(onboardingTaskUrl);
@@ -261,7 +269,8 @@ export async function fetchLiveVideoStreamStatus(
 
     const url = `${baseUrl}?${queryParams.toString()}`;
 
-    const onboardingTaskUrl = 'https://api.twitter.com/1.1/onboarding/task.json';
+    const onboardingTaskUrl =
+        'https://api.twitter.com/1.1/onboarding/task.json';
 
     // Retrieve necessary cookies and tokens
     const cookies = await auth.cookieJar().getCookies(onboardingTaskUrl);
@@ -325,7 +334,8 @@ export async function fetchAuthenticatePeriscope(
 
     const url = `https://x.com/i/api/graphql/${queryId}/${operationName}?variables=${variablesEncoded}&features=${featuresEncoded}`;
 
-    const onboardingTaskUrl = 'https://api.twitter.com/1.1/onboarding/task.json';
+    const onboardingTaskUrl =
+        'https://api.twitter.com/1.1/onboarding/task.json';
 
     const cookies = await auth.cookieJar().getCookies(onboardingTaskUrl);
     const xCsrfToken = cookies.find((cookie) => cookie.key === 'ct0');
@@ -376,7 +386,9 @@ export async function fetchAuthenticatePeriscope(
         }
 
         if (!data.data.authenticate_periscope) {
-            throw new Error('Periscope authentication failed, no data returned.');
+            throw new Error(
+                'Periscope authentication failed, no data returned.',
+            );
         }
 
         return data.data.authenticate_periscope;
