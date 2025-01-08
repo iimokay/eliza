@@ -12,7 +12,7 @@
 
 [packages/core/src/types.ts:1240](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1240)
 
-***
+---
 
 ### VERBOSE
 
@@ -22,7 +22,7 @@
 
 [packages/core/src/types.ts:1241](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1241)
 
-***
+---
 
 ### NONE
 

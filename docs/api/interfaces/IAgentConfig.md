@@ -4,4 +4,4 @@
 
 ## Indexable
 
- \[`key`: `string`\]: `string`
+\[`key`: `string`\]: `string`

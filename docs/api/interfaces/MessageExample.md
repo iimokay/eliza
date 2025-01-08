@@ -16,7 +16,7 @@ Associated user
 
 [packages/core/src/types.ts:365](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L365)
 
-***
+---
 
 ### content
 

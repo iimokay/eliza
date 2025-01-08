@@ -12,7 +12,7 @@
 
 [packages/core/src/types.ts:1011](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1011)
 
-***
+---
 
 ### DATABASE
 
@@ -22,7 +22,7 @@
 
 [packages/core/src/types.ts:1012](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1012)
 
-***
+---
 
 ### FILESYSTEM
 

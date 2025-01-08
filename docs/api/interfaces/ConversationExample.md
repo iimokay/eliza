@@ -16,7 +16,7 @@ UUID of user in conversation
 
 [packages/core/src/types.ts:50](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L50)
 
-***
+---
 
 ### content
 
