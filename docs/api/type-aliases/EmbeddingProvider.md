@@ -2,8 +2,7 @@
 
 # Type Alias: EmbeddingProvider
 
-> **EmbeddingProvider**: _typeof_ [`EmbeddingProvider`](../variables/EmbeddingProvider.md)\[keyof _typeof_ [
-> `EmbeddingProvider`](../variables/EmbeddingProvider.md)\]
+> **EmbeddingProvider**: _typeof_ [`EmbeddingProvider`](../variables/EmbeddingProvider.md)\[keyof _typeof_ [ > `EmbeddingProvider`](../variables/EmbeddingProvider.md)\]
 
 ## Defined in
 
