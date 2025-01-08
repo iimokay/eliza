@@ -1,10 +1,11 @@
-import { elizaLogger, models } from "@elizaos/core";
-import { Service } from "@elizaos/core";
 import {
+    elizaLogger,
     IAgentRuntime,
-    ModelProviderName,
-    ServiceType,
     IImageDescriptionService,
+    ModelProviderName,
+    models,
+    Service,
+    ServiceType,
 } from "@elizaos/core";
 import {
     AutoProcessor,
@@ -190,12 +191,7 @@ export class ImageDescriptionService
     ): Promise<string> {
         for (let attempt = 0; attempt < 3; attempt++) {
             try {
-                const shouldUseBase64 =
-                    (isGif || isLocalFile) &&
-                    !(
-                        this.runtime.imageModelProvider ===
-                        ModelProviderName.OPENAI
-                    );
+                const shouldUseBase64 = isGif || isLocalFile;
                 const mimeType = isGif
                     ? "png"
                     : path.extname(imageUrl).slice(1) || "jpeg";
@@ -214,11 +210,11 @@ export class ImageDescriptionService
                         },
                     },
                 ];
-                // If model provider is openai, use the endpoint, otherwise use the default openai endpoint.
+
                 const endpoint =
-                    this.runtime.imageModelProvider === ModelProviderName.OPENAI
-                        ? models[this.runtime.imageModelProvider].endpoint
-                        : "https://api.openai.com/v1";
+                    models[this.runtime.imageModelProvider].endpoint ??
+                    "https://api.openai.com/v1";
+                elizaLogger.log("Describe Image Completions", imageUrl);
                 const response = await fetch(endpoint + "/chat/completions", {
                     method: "POST",
                     headers: {
