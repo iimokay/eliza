@@ -7,7 +7,7 @@ import {
 } from "@elizaos/core";
 import NodeCache from "node-cache";
 import * as fcl from "@onflow/fcl";
-import type { CompositeSignature, Account } from "@onflow/typedefs";
+import type { Account, CompositeSignature } from "@onflow/typedefs";
 import type { FlowConnector } from "./utils/flow.connector";
 import { IFlowScriptExecutor, IFlowSigner } from "../types";
 import { getFlowConnectorInstance } from "./connector.provider";

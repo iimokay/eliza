@@ -1,18 +1,23 @@
 // THIS IS INCOMPLETE
 // Look for the TODOs to see what needs to be updated
 
-import { settings } from "@elizaos/core";
-import { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
 import {
+    IAgentRuntime,
+    Memory,
+    Provider,
+    settings,
+    State,
+} from "@elizaos/core";
+import {
+    CalculatedBuyAmounts,
     DexScreenerData,
     DexScreenerPair,
     HolderData,
+    Prices,
     ProcessedTokenData,
     TokenSecurityData,
-    CalculatedBuyAmounts,
-    Prices,
 } from "../types/trustDB.ts";
-import { WalletProvider, Item } from "./walletProvider.ts";
+import { Item, WalletProvider } from "./walletProvider.ts";
 import { num } from "starknet";
 import {
     analyzeHighSupplyHolders,

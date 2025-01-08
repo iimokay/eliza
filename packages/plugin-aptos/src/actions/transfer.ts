@@ -1,16 +1,16 @@
-import { elizaLogger } from "@elizaos/core";
 import {
+    type Action,
     ActionExample,
+    composeContext,
     Content,
+    elizaLogger,
+    generateObjectDeprecated,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
 } from "@elizaos/core";
-import { composeContext } from "@elizaos/core";
-import { generateObjectDeprecated } from "@elizaos/core";
 import {
     Account,
     Aptos,

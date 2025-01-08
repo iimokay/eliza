@@ -16,7 +16,7 @@ Unique identifier
 
 [packages/core/src/types.ts:528](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L528)
 
-***
+---
 
 ### account
 

@@ -26,8 +26,8 @@ declare module "@onflow/fcl" {
     import type {
         Account,
         CompositeSignature,
-        TransactionStatus,
         CurrentUser as UserData,
+        TransactionStatus,
     } from "@onflow/typedefs";
 
     export enum TransactionStatusTypes {

@@ -1,17 +1,17 @@
 import {
     Action,
+    ActionExample,
+    composeContext,
+    Content,
+    generateObject,
     HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
     ModelClass,
-    Content,
-    ActionExample,
-    generateObject,
+    State,
 } from "@elizaos/core";
-import { Indexer, ZgFile, getFlowContract } from "@0glabs/0g-ts-sdk";
+import { getFlowContract, Indexer, ZgFile } from "@0glabs/0g-ts-sdk";
 import { ethers } from "ethers";
-import { composeContext } from "@elizaos/core";
 import { promises as fs } from "fs";
 
 import { uploadTemplate } from "../templates/upload";

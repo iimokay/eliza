@@ -1,6 +1,7 @@
 import type { Principal } from "@dfinity/principal";
 import type { ActorSubclass } from "@dfinity/agent";
 import type { IDL } from "@dfinity/candid";
+
 export interface ICPConfig {
     privateKey: string;
     network?: "mainnet" | "testnet";

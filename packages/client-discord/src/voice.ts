@@ -1,34 +1,34 @@
 import {
+    composeContext,
+    composeRandomUser,
     Content,
+    elizaLogger,
+    generateMessageResponse,
+    generateShouldRespond,
+    getEmbeddingZeroVector,
     HandlerCallback,
     IAgentRuntime,
+    ISpeechService,
+    ITranscriptionService,
     Memory,
     ModelClass,
     ServiceType,
     State,
-    UUID,
-    composeContext,
-    composeRandomUser,
-    elizaLogger,
-    getEmbeddingZeroVector,
-    generateMessageResponse,
     stringToUuid,
-    generateShouldRespond,
-    ITranscriptionService,
-    ISpeechService,
+    UUID,
 } from "@elizaos/core";
 import {
     AudioPlayer,
     AudioReceiveStream,
+    createAudioPlayer,
+    createAudioResource,
+    entersState,
+    getVoiceConnections,
+    joinVoiceChannel,
     NoSubscriberBehavior,
     StreamType,
     VoiceConnection,
     VoiceConnectionStatus,
-    createAudioPlayer,
-    createAudioResource,
-    getVoiceConnections,
-    joinVoiceChannel,
-    entersState,
 } from "@discordjs/voice";
 import {
     BaseGuildVoiceChannel,
@@ -41,7 +41,7 @@ import {
 } from "discord.js";
 import EventEmitter from "events";
 import prism from "prism-media";
-import { Readable, pipeline } from "stream";
+import { pipeline, Readable } from "stream";
 import { DiscordClient } from "./index.ts";
 import {
     discordShouldRespondTemplate,

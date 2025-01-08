@@ -11,6 +11,7 @@ import {
 import { elizaLogger } from "@elizaos/core";
 
 import { camelize } from "./utils";
+
 const API_BASE_URL = process.env.STORY_API_BASE_URL;
 const API_VERSION = "v2";
 export const API_URL = `${API_BASE_URL}/${API_VERSION}`;

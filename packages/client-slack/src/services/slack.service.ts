@@ -1,4 +1,4 @@
-import { Service, IAgentRuntime, ServiceType } from "@elizaos/core";
+import { IAgentRuntime, Service, ServiceType } from "@elizaos/core";
 import { WebClient } from "@slack/web-api";
 import { ISlackService } from "../types/slack-types";
 

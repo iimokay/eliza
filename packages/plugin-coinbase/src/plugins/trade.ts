@@ -1,16 +1,16 @@
 import { Coinbase } from "@coinbase/coinbase-sdk";
 import {
     Action,
-    Plugin,
+    composeContext,
     elizaLogger,
+    generateObject,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    HandlerCallback,
-    State,
-    composeContext,
-    generateObject,
     ModelClass,
+    Plugin,
     Provider,
+    State,
 } from "@elizaos/core";
 import { executeTradeAndCharityTransfer, getWalletDetails } from "../utils";
 import { tradeTemplate } from "../templates";

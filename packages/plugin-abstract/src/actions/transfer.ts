@@ -1,15 +1,15 @@
 import {
+    type Action,
     ActionExample,
+    composeContext,
     Content,
+    elizaLogger,
+    generateObject,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
-    elizaLogger,
-    composeContext,
-    generateObject,
 } from "@elizaos/core";
 import { validateAbstractConfig } from "../environment";
 

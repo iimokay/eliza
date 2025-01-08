@@ -1,13 +1,12 @@
 import {
     Action,
-    IAgentRuntime,
-    Memory,
-    State,
     composeContext,
     elizaLogger,
-    ModelClass,
-    formatMessages,
     generateObject,
+    IAgentRuntime,
+    Memory,
+    ModelClass,
+    State,
 } from "@elizaos/core";
 import { Scraper } from "agent-twitter-client";
 import { tweetTemplate } from "../templates";

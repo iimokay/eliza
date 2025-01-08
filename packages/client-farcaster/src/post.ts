@@ -1,10 +1,10 @@
 import {
     composeContext,
+    elizaLogger,
     generateText,
     IAgentRuntime,
     ModelClass,
     stringToUuid,
-    elizaLogger,
 } from "@elizaos/core";
 import { FarcasterClient } from "./client";
 import { formatTimeline, postTemplate } from "./prompts";

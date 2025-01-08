@@ -3,9 +3,9 @@ import { Keypair } from "@solana/web3.js";
 import crypto from "crypto";
 import { DeriveKeyResponse, TappdClient } from "@phala/dstack-sdk";
 import { privateKeyToAccount } from "viem/accounts";
-import { PrivateKeyAccount, keccak256 } from "viem";
+import { keccak256, PrivateKeyAccount } from "viem";
 import { RemoteAttestationProvider } from "./remoteAttestationProvider";
-import { TEEMode, RemoteAttestationQuote } from "../types/tee";
+import { RemoteAttestationQuote, TEEMode } from "../types/tee";
 
 interface DeriveKeyAttestationData {
     agentId: string;

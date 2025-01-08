@@ -1,8 +1,7 @@
 import {
-    TrustScoreDatabase,
     TokenPerformance,
-    // TradePerformance,
     TokenRecommendation,
+    TrustScoreDatabase,
 } from "@elizaos/plugin-trustdb";
 import { Connection, PublicKey } from "@solana/web3.js";
 // Assuming TokenProvider and IAgentRuntime are available

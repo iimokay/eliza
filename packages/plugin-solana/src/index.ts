@@ -10,11 +10,10 @@ import pumpfun from "./actions/pumpfun.ts";
 import fomo from "./actions/fomo.ts";
 import { executeSwapForDAO } from "./actions/swapDao";
 import transferToken from "./actions/transfer.ts";
-import { walletProvider } from "./providers/wallet.ts";
+import { walletProvider, WalletProvider } from "./providers/wallet.ts";
 import { trustScoreProvider } from "./providers/trustScoreProvider.ts";
 import { trustEvaluator } from "./evaluators/trust.ts";
 import { TokenProvider } from "./providers/token.ts";
-import { WalletProvider } from "./providers/wallet.ts";
 
 export { TokenProvider, WalletProvider };
 

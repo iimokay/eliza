@@ -1,9 +1,9 @@
-import { composeContext } from "@elizaos/core";
-import { generateTrueOrFalse } from "@elizaos/core";
-import { booleanFooter } from "@elizaos/core";
 import {
     Action,
     ActionExample,
+    booleanFooter,
+    composeContext,
+    generateTrueOrFalse,
     IAgentRuntime,
     Memory,
     ModelClass,

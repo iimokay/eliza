@@ -4,15 +4,15 @@
 
 ## Enumeration Members
 
-### IMAGE\_DESCRIPTION
+### IMAGE_DESCRIPTION
 
-> **IMAGE\_DESCRIPTION**: `"image_description"`
+> **IMAGE_DESCRIPTION**: `"image_description"`
 
 #### Defined in
 
 [packages/core/src/types.ts:1226](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1226)
 
-***
+---
 
 ### TRANSCRIPTION
 
@@ -22,7 +22,7 @@
 
 [packages/core/src/types.ts:1227](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1227)
 
-***
+---
 
 ### VIDEO
 
@@ -32,17 +32,17 @@
 
 [packages/core/src/types.ts:1228](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1228)
 
-***
+---
 
-### TEXT\_GENERATION
+### TEXT_GENERATION
 
-> **TEXT\_GENERATION**: `"text_generation"`
+> **TEXT_GENERATION**: `"text_generation"`
 
 #### Defined in
 
 [packages/core/src/types.ts:1229](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1229)
 
-***
+---
 
 ### BROWSER
 
@@ -52,17 +52,17 @@
 
 [packages/core/src/types.ts:1230](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1230)
 
-***
+---
 
-### SPEECH\_GENERATION
+### SPEECH_GENERATION
 
-> **SPEECH\_GENERATION**: `"speech_generation"`
+> **SPEECH_GENERATION**: `"speech_generation"`
 
 #### Defined in
 
 [packages/core/src/types.ts:1231](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1231)
 
-***
+---
 
 ### PDF
 
@@ -72,7 +72,7 @@
 
 [packages/core/src/types.ts:1232](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1232)
 
-***
+---
 
 ### INTIFACE
 
@@ -82,17 +82,17 @@
 
 [packages/core/src/types.ts:1233](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1233)
 
-***
+---
 
-### AWS\_S3
+### AWS_S3
 
-> **AWS\_S3**: `"aws_s3"`
+> **AWS_S3**: `"aws_s3"`
 
 #### Defined in
 
 [packages/core/src/types.ts:1234](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1234)
 
-***
+---
 
 ### BUTTPLUG
 
@@ -102,7 +102,7 @@
 
 [packages/core/src/types.ts:1235](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1235)
 
-***
+---
 
 ### SLACK
 

@@ -3,6 +3,7 @@ import { executeSwap } from "./actions/swap";
 import transfer from "./actions/transfer";
 import { deployToken } from "./actions/unruggable";
 import transferSubdomain from "./actions/subdomain";
+
 export const PROVIDER_CONFIG = {
     AVNU_API: "https://starknet.impulse.avnu.fi/v1",
     MAX_RETRIES: 3,

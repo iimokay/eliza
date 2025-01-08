@@ -2,8 +2,8 @@ import {
     elizaLogger,
     getEmbeddingZeroVector,
     IAgentRuntime,
-    stringToUuid,
     type Memory,
+    stringToUuid,
     type UUID,
 } from "@elizaos/core";
 import { publicationUuid } from "./utils";

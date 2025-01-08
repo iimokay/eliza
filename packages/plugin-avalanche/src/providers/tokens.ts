@@ -1,9 +1,9 @@
 import {
+    elizaLogger,
     IAgentRuntime,
     Memory,
     Provider,
     State,
-    elizaLogger,
 } from "@elizaos/core";
 import { TOKEN_ADDRESSES } from "../utils/constants";
 

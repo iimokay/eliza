@@ -50,7 +50,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 [packages/core/src/types.ts:1041](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1041)
 
-***
+---
 
 ### initializeModel()
 
@@ -64,7 +64,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 [packages/core/src/types.ts:1156](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1156)
 
-***
+---
 
 ### queueMessageCompletion()
 
@@ -78,11 +78,11 @@ Add abstract initialize method that must be implemented by derived classes
 
 • **stop**: `string`[]
 
-• **frequency\_penalty**: `number`
+• **frequency_penalty**: `number`
 
-• **presence\_penalty**: `number`
+• **presence_penalty**: `number`
 
-• **max\_tokens**: `number`
+• **max_tokens**: `number`
 
 #### Returns
 
@@ -92,7 +92,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 [packages/core/src/types.ts:1157](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1157)
 
-***
+---
 
 ### queueTextCompletion()
 
@@ -106,11 +106,11 @@ Add abstract initialize method that must be implemented by derived classes
 
 • **stop**: `string`[]
 
-• **frequency\_penalty**: `number`
+• **frequency_penalty**: `number`
 
-• **presence\_penalty**: `number`
+• **presence_penalty**: `number`
 
-• **max\_tokens**: `number`
+• **max_tokens**: `number`
 
 #### Returns
 
@@ -120,7 +120,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 [packages/core/src/types.ts:1165](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1165)
 
-***
+---
 
 ### getEmbeddingResponse()
 

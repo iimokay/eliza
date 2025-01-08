@@ -1,10 +1,14 @@
 import { Tweet } from "agent-twitter-client";
-import { getEmbeddingZeroVector } from "@elizaos/core";
-import { Content, Memory, UUID } from "@elizaos/core";
-import { stringToUuid } from "@elizaos/core";
+import {
+    Content,
+    elizaLogger,
+    getEmbeddingZeroVector,
+    Media,
+    Memory,
+    stringToUuid,
+    UUID,
+} from "@elizaos/core";
 import { ClientBase } from "./base";
-import { elizaLogger } from "@elizaos/core";
-import { Media } from "@elizaos/core";
 import fs from "fs";
 import path from "path";
 
@@ -214,8 +218,16 @@ export async function sendTweet(
         }
         const result = await client.requestQueue.add(async () =>
             isLongTweet
-                ? client.twitterClient.sendLongTweet(chunk.trim(), previousTweetId, mediaData)
-                : client.twitterClient.sendTweet(chunk.trim(), previousTweetId, mediaData)
+                ? client.twitterClient.sendLongTweet(
+                      chunk.trim(),
+                      previousTweetId,
+                      mediaData
+                  )
+                : client.twitterClient.sendTweet(
+                      chunk.trim(),
+                      previousTweetId,
+                      mediaData
+                  )
         );
 
         const body = await result.json();
@@ -245,7 +257,10 @@ export async function sendTweet(
             sentTweets.push(finalTweet);
             previousTweetId = finalTweet.id;
         } else {
-            elizaLogger.error("Error sending tweet chunk:", { chunk, response: body });
+            elizaLogger.error("Error sending tweet chunk:", {
+                chunk,
+                response: body,
+            });
         }
 
         // Wait a bit between tweets to avoid rate limiting issues

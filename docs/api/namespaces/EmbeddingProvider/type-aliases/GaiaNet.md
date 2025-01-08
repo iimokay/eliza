@@ -2,7 +2,7 @@
 
 # Type Alias: GaiaNet
 
-> **GaiaNet**: *typeof* `EmbeddingProvider.GaiaNet`
+> **GaiaNet**: _typeof_ `EmbeddingProvider.GaiaNet`
 
 ## Defined in
 

@@ -52,6 +52,7 @@ To ensure sustainable development and continued innovation, we ask contributions
 All contributions are publicly tracked on-chain and used exclusively for ecosystem development.
 
 ### ⚠️ Don't forget to tip the big guy 10%: ⚠️
+
 [AM84n1iLdxgVTAyENBcLdjXoyvjentTbu5Q6EpKV1PeG](https://solscan.io/account/AM84n1iLdxgVTAyENBcLdjXoyvjentTbu5Q6EpKV1PeG)
 
 ## 🚀 Quick Start

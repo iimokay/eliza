@@ -1,9 +1,9 @@
 import {
+    elizaLogger,
     IAgentRuntime,
     Memory,
     Provider,
     State,
-    elizaLogger,
 } from "@elizaos/core";
 import { formatUnits } from "viem";
 import { getAccount, getDecimals, getTokenBalance } from "../utils";

@@ -1,17 +1,15 @@
 import {
+    type Action,
+    ActionExample,
     composeContext,
     generateImage,
-    generateText,
     generateObjectDeprecated,
-} from "@elizaos/core";
-import {
-    ActionExample,
+    generateText,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
 } from "@elizaos/core";
 import { idlFactory } from "../canisters/pick-pump/index.did";
 import { _SERVICE } from "../canisters/pick-pump/index.did.d";

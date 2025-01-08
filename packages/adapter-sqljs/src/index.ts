@@ -5,11 +5,11 @@ import {
     Account,
     Actor,
     DatabaseAdapter,
+    type Goal,
     GoalStatus,
     IDatabaseCacheAdapter,
-    Participant,
-    type Goal,
     type Memory,
+    Participant,
     type Relationship,
     type UUID,
 } from "@elizaos/core";

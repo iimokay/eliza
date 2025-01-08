@@ -3,6 +3,7 @@ export * from "./services/index.ts";
 import { Plugin } from "@elizaos/core";
 
 import {
+    AwsS3Service,
     BrowserService,
     ImageDescriptionService,
     LlamaService,
@@ -10,7 +11,6 @@ import {
     SpeechService,
     TranscriptionService,
     VideoService,
-    AwsS3Service,
 } from "./services/index.ts";
 import { describeImage } from "./actions/describe-image.ts";
 

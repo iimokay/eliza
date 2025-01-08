@@ -1,6 +1,6 @@
 import { Plugin } from "@elizaos/core";
 import transferAction from "./actions/transfer.ts";
-import { WalletProvider, nativeWalletProvider } from "./providers/wallet.ts";
+import { nativeWalletProvider, WalletProvider } from "./providers/wallet.ts";
 
 export { WalletProvider, transferAction as TransferTonToken };
 

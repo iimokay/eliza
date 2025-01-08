@@ -1,14 +1,14 @@
 import {
     composeContext,
+    Content,
+    elizaLogger,
     generateMessageResponse,
     generateShouldRespond,
+    HandlerCallback,
+    type IAgentRuntime,
     Memory,
     ModelClass,
     stringToUuid,
-    elizaLogger,
-    HandlerCallback,
-    Content,
-    type IAgentRuntime,
 } from "@elizaos/core";
 import type { FarcasterClient } from "./client";
 import { toHex } from "viem";

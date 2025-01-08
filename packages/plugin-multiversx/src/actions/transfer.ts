@@ -1,15 +1,15 @@
 import {
-    elizaLogger,
+    type Action,
     ActionExample,
+    composeContext,
     Content,
+    elizaLogger,
+    generateObject,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    composeContext,
-    generateObject,
-    type Action,
 } from "@elizaos/core";
 import { WalletProvider } from "../providers/wallet";
 import { validateMultiversxConfig } from "../enviroment";

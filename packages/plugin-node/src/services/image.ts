@@ -21,6 +21,7 @@ import fs from "fs";
 import gifFrames from "gif-frames";
 import os from "os";
 import path from "path";
+import { realImgUrl } from "./fetchImg.ts";
 
 export class ImageDescriptionService
     extends Service
@@ -90,8 +91,10 @@ export class ImageDescriptionService
     }
 
     async describeImage(
-        imageUrl: string
+        imgUrl: string,
+        prompt?: string
     ): Promise<{ title: string; description: string }> {
+        const imageUrl = await realImgUrl(imgUrl);
         if (!this.initialized) {
             const model = models[this.runtime?.character?.modelProvider];
 
@@ -111,7 +114,7 @@ export class ImageDescriptionService
                     "Runtime is required for OpenAI image recognition"
                 );
             }
-            return this.recognizeWithOpenAI(imageUrl);
+            return this.recognizeWithOpenAI(imageUrl, prompt);
         }
 
         this.queue.push(imageUrl);
@@ -131,7 +134,8 @@ export class ImageDescriptionService
     }
 
     private async recognizeWithOpenAI(
-        imageUrl: string
+        imageUrl: string,
+        prompt?: string
     ): Promise<{ title: string; description: string }> {
         const isGif = imageUrl.toLowerCase().endsWith(".gif");
         let imageData: Buffer | null = null;
@@ -157,12 +161,11 @@ export class ImageDescriptionService
                 throw new Error("Failed to fetch image data");
             }
 
-            const prompt =
-                "Describe this image and give it a title. The first line should be the title, and then a line break, then a detailed description of the image. Respond with the format 'title\ndescription'";
             const text = await this.requestOpenAI(
                 imageUrl,
                 imageData,
-                prompt,
+                prompt ??
+                    "Describe this image and give it a title. The first line should be the title, and then a line break, then a detailed description of the image. Respond with the format 'title\ndescription'",
                 isGif,
                 true
             );
@@ -187,7 +190,12 @@ export class ImageDescriptionService
     ): Promise<string> {
         for (let attempt = 0; attempt < 3; attempt++) {
             try {
-                const shouldUseBase64 = (isGif || isLocalFile)&& !(this.runtime.imageModelProvider === ModelProviderName.OPENAI);
+                const shouldUseBase64 =
+                    (isGif || isLocalFile) &&
+                    !(
+                        this.runtime.imageModelProvider ===
+                        ModelProviderName.OPENAI
+                    );
                 const mimeType = isGif
                     ? "png"
                     : path.extname(imageUrl).slice(1) || "jpeg";
@@ -209,8 +217,8 @@ export class ImageDescriptionService
                 // If model provider is openai, use the endpoint, otherwise use the default openai endpoint.
                 const endpoint =
                     this.runtime.imageModelProvider === ModelProviderName.OPENAI
-                    ? models[this.runtime.imageModelProvider].endpoint
-                    : "https://api.openai.com/v1";
+                        ? models[this.runtime.imageModelProvider].endpoint
+                        : "https://api.openai.com/v1";
                 const response = await fetch(endpoint + "/chat/completions", {
                     method: "POST",
                     headers: {

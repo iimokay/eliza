@@ -2,7 +2,7 @@
 
 # Type Alias: OpenAI
 
-> **OpenAI**: *typeof* `EmbeddingProvider.OpenAI`
+> **OpenAI**: _typeof_ `EmbeddingProvider.OpenAI`
 
 ## Defined in
 

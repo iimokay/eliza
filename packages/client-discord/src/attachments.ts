@@ -1,6 +1,5 @@
-import { generateText, trimTokens } from "@elizaos/core";
-import { parseJSONObjectFromText } from "@elizaos/core";
 import {
+    generateText,
     IAgentRuntime,
     IImageDescriptionService,
     IPdfService,
@@ -8,7 +7,9 @@ import {
     IVideoService,
     Media,
     ModelClass,
+    parseJSONObjectFromText,
     ServiceType,
+    trimTokens,
 } from "@elizaos/core";
 import { Attachment, Collection } from "discord.js";
 import ffmpeg from "fluent-ffmpeg";

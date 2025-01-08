@@ -1,13 +1,13 @@
 import {
     Account,
     Actor,
-    GoalStatus,
     type Goal,
+    GoalStatus,
+    IDatabaseAdapter,
     type Memory,
+    Participant,
     type Relationship,
     type UUID,
-    Participant,
-    IDatabaseAdapter,
 } from "./types.ts";
 import { CircuitBreaker } from "./database/CircuitBreaker";
 import { elizaLogger } from "./logger";

@@ -1,4 +1,17 @@
-import { generateImage } from "@elizaos/core";
+import {
+    type Action,
+    ActionExample,
+    composeContext,
+    Content,
+    generateImage,
+    generateObject,
+    HandlerCallback,
+    IAgentRuntime,
+    Memory,
+    ModelClass,
+    settings,
+    State,
+} from "@elizaos/core";
 import {
     Connection,
     Keypair,
@@ -8,19 +21,6 @@ import {
 import { Fomo, PurchaseCurrency } from "fomo-sdk-solana";
 import { getAssociatedTokenAddressSync } from "@solana/spl-token";
 import bs58 from "bs58";
-import {
-    settings,
-    ActionExample,
-    Content,
-    HandlerCallback,
-    IAgentRuntime,
-    Memory,
-    ModelClass,
-    State,
-    generateObject,
-    composeContext,
-    type Action,
-} from "@elizaos/core";
 
 import { walletProvider } from "../providers/wallet.ts";
 

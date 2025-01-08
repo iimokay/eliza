@@ -1,21 +1,18 @@
 import {
     Action,
+    composeContext,
+    generateObject,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    HandlerCallback,
-} from "@elizaos/core";
-import {
-    generateObject,
-    composeContext,
     ModelClass,
-    Content,
+    State,
 } from "@elizaos/core";
 import { createPublicClient, createWalletClient, http, parseCFX } from "cive";
 import { privateKeyToAccount } from "cive/accounts";
 import { testnet } from "cive/chains";
 import { confluxTransferTemplate } from "../templates/transfer";
-import { TransferSchema, isTransferContent } from "../types";
+import { isTransferContent, TransferSchema } from "../types";
 
 const sendCFX = async (
     secretKey: `0x${string}`,

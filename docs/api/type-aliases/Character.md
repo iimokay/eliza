@@ -44,8 +44,6 @@ Model provider to use
 
 Image model provider to use, if different from modelProvider
 
-
-
 ### imageVisionModelProvider?
 
 > `optional` **imageVisionModelProvider**: [`ModelProviderName`](../enumerations/ModelProviderName.md)
@@ -53,7 +51,6 @@ Image model provider to use, if different from modelProvider
 Image Vision model provider to use, if different from modelProvider
 
 imageVisionModelProvider
-
 
 ### modelEndpointOverride?
 
@@ -229,7 +226,7 @@ Optional configuration
 
 #### Index Signature
 
- \[`key`: `string`\]: `string`
+\[`key`: `string`\]: `string`
 
 ### settings.intiface?
 
@@ -343,7 +340,7 @@ New structured ElevenLabs config
 
 #### Index Signature
 
- \[`key`: `string`\]: `any`[]
+\[`key`: `string`\]: `any`[]
 
 ### settings.chains.evm?
 

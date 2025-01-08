@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Accordion } from "./Accordion";
 import { StatCard } from "./StatCard";
 import { THEME_COLORS } from "./Contributors";

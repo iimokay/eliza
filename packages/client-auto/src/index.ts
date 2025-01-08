@@ -1,4 +1,4 @@
-import { Client, IAgentRuntime, elizaLogger } from "@elizaos/core";
+import { Client, elizaLogger, IAgentRuntime } from "@elizaos/core";
 
 export class AutoClient {
     interval: NodeJS.Timeout;

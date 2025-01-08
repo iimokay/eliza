@@ -1,18 +1,18 @@
-import { IAgentRuntime, Provider, Memory, State } from "@elizaos/core";
+import { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
 import {
+    Account,
+    type Address,
+    type Chain,
     createPublicClient,
     createWalletClient,
-    http,
     formatUnits,
+    http,
+    type HttpTransport,
     type PublicClient,
     type WalletClient,
-    type Chain,
-    type HttpTransport,
-    type Address,
-    Account,
 } from "viem";
 import { storyOdyssey } from "viem/chains";
-import type { SupportedChain, ChainMetadata } from "../types";
+import type { ChainMetadata, SupportedChain } from "../types";
 import { privateKeyToAccount } from "viem/accounts";
 import { StoryClient, StoryConfig } from "@story-protocol/core-sdk";
 

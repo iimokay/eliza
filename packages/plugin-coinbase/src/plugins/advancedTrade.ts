@@ -1,19 +1,19 @@
 import { RESTClient } from "../../advanced-sdk-ts/src/rest";
 import {
     Action,
-    Plugin,
+    composeContext,
     elizaLogger,
+    generateObject,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    HandlerCallback,
-    State,
-    composeContext,
-    generateObject,
     ModelClass,
+    Plugin,
     Provider,
+    State,
 } from "@elizaos/core";
 import { advancedTradeTemplate } from "../templates";
-import { isAdvancedTradeContent, AdvancedTradeSchema } from "../types";
+import { AdvancedTradeSchema, isAdvancedTradeContent } from "../types";
 import { readFile } from "fs/promises";
 import { parse } from "csv-parse/sync";
 import path from "path";
@@ -21,8 +21,8 @@ import { fileURLToPath } from "url";
 import fs from "fs";
 import { createArrayCsvWriter } from "csv-writer";
 import {
-    OrderSide,
     OrderConfiguration,
+    OrderSide,
 } from "../../advanced-sdk-ts/src/rest/types/common-types";
 import { CreateOrderResponse } from "../../advanced-sdk-ts/src/rest/types/orders-types";
 

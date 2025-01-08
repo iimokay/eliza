@@ -24,7 +24,7 @@
 
 [packages/core/src/types.ts:1017](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1017)
 
-***
+---
 
 ### set()
 
@@ -50,7 +50,7 @@
 
 [packages/core/src/types.ts:1018](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1018)
 
-***
+---
 
 ### delete()
 

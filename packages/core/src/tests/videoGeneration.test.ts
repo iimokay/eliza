@@ -1,5 +1,5 @@
 import { IAgentRuntime, Memory, State } from "@elizaos/core";
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
 // Mock the fetch function
 global.fetch = vi.fn();

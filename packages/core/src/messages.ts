@@ -1,7 +1,7 @@
 import {
-    IAgentRuntime,
     type Actor,
     type Content,
+    IAgentRuntime,
     type Memory,
     type UUID,
 } from "./types.ts";

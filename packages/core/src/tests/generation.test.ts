@@ -1,5 +1,5 @@
-import { describe, expect, it, vi, beforeEach } from "vitest";
-import { ModelProviderName, IAgentRuntime } from "../types";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import { IAgentRuntime, ModelProviderName } from "../types";
 import { models } from "../models";
 import {
     generateText,
