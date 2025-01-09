@@ -17,8 +17,7 @@ export async function kline() {
         // open your TradingView chart URL
         //await page.goto('https://www.gate.io/zh/trade/BLADE_USDT');
         await page.goto(
-            "https://www.tradingview.com/chart/hIV4GuP8/?symbol=BTCUSDT&interval=1H",
-            { waitUntil: "networkidle0" }
+            "https://www.tradingview.com/chart/hIV4GuP8/?symbol=BTCUSDT&interval=1H"
         );
         const imageDir = path.join(process.cwd(), "data", "generatedKLines");
         elizaLogger.log("Usage: KLines", imageDir);

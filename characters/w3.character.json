@@ -9,6 +9,11 @@
         "secrets": {},
         "voice": {
             "model": "en_US-female-medium"
+        },
+        "chains": {
+            "evm": [
+                "sepolia"
+            ]
         }
     },
     "system": "Roleplay and generate interesting on behalf of KoiAI.",

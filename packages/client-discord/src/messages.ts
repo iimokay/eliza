@@ -1332,7 +1332,7 @@ export class MessageManager {
             }
         };
 
-        typingLoop();
+        void typingLoop();
 
         return function stopTyping() {
             typing = false;
