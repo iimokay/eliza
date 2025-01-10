@@ -34,7 +34,30 @@ FROM node:23.3.0-slim
 # Install runtime dependencies if needed
 RUN npm install -g pnpm@9.4.0 && \
     apt-get update && \
-    apt-get install -y git python3 && \
+    apt-get install -y git python3 \
+        ca-certificates \
+        fonts-liberation \
+        libappindicator1 \
+        libasound2 \
+        libatk-bridge2.0-0 \
+        libatk1.0-0 \
+        libcups2 \
+        libdbus-1-3 \
+        libexpat1 \
+        libfontconfig1 \
+        libgbm-dev \
+        libglib2.0-0 \
+        libgtk-3-0 \
+        libnspr4 \
+        libnss3 \
+        libpango-1.0-0 \
+        libx11-xcb1 \
+        libxcomposite1 \
+        libxdamage1 \
+        libxrandr2 \
+        lsb-release \
+        wget \
+        xdg-utils && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
