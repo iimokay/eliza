@@ -5,9 +5,8 @@ import { elizaLogger } from "@elizaos/core";
 
 export async function kline() {
     try {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
-        const browser = await puppeteer.launch({ headless: "new" });
+        elizaLogger.info("0.kline launch staring!");
+        const browser = await puppeteer.launch();
         elizaLogger.info("1.kline launch completed!");
         const page = await browser.newPage();
         // set win width and height
