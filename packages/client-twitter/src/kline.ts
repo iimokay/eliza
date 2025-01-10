@@ -8,6 +8,7 @@ export async function kline() {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
         const browser = await puppeteer.launch({ headless: "new" });
+        elizaLogger.info("1.kline launch completed!");
         const page = await browser.newPage();
         // set win width and height
         await page.setViewport({
@@ -19,6 +20,7 @@ export async function kline() {
         await page.goto(
             "https://www.tradingview.com/chart/hIV4GuP8/?symbol=BTCUSDT&interval=1H"
         );
+        elizaLogger.info("2.kline goto completed!");
         const imageDir = path.join(process.cwd(), "data", "generatedKLines");
         elizaLogger.log("Usage: KLines", imageDir);
         if (!fs.existsSync(imageDir)) {
@@ -31,7 +33,7 @@ export async function kline() {
         // set clip ares
         const chartElement = await page.$(".chart-container"); // select DOM
         const chartData = await chartElement?.screenshot({ path: filePath });
-
+        elizaLogger.info("3.kline screenshot completed!");
         await browser.close();
         const mediaBuffer = Buffer.from(chartData);
         return { filePath, buffer: mediaBuffer, mediaType: "image/png" };
